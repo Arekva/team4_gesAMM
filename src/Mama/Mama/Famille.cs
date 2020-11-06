@@ -14,15 +14,17 @@ namespace Mama
         /// <summary>
         /// Identifiant unique de la famille.
         /// </summary>
-        public string Code { get; }
+        public string Code { get; } = null;
+
         /// <summary>
         /// Nom du médicament.
         /// </summary>
-        public string Libelle { get; }
+        public string Libelle { get; } = null;
+
         /// <summary>
         /// Nombre de médicament qui ont reçu une validation AMM.
         /// </summary>
-        public int NombreAMM { get; set; }
+        public int NombreAMM { get; set; } = 0;
         /// <summary>
         /// Nouvelle famille où tous les paramètres sont fournis.
         /// </summary>
