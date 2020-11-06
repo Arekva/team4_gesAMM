@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Mama
@@ -50,6 +51,37 @@ namespace Mama
         {
             Connexion = new SqlConnection(login ?? ConnexionLogin);
             Connexion.Open();
+        }
+
+        /// <summary>
+        /// Lire une le résultat d'une procédure. 
+        /// </summary>
+        /// <param name="nom">Le nom de la procédure (ex: <code>prc_toutesLesFamilles</code>).</param>
+        /// <param name="parametres">Les paramètres de la procédure. Ne rien mettre si aucun. Les paramètres sont séparés par des ,<br>(ex: new Parametre(...), new Parametre(...), ...</br></param>
+        /// <returns>Le flux de sortie de la requête.</returns>
+        public static SqlDataReader LireProcedure(string nom, params Parametre[] parametres)
+        {
+            SqlCommand commande = new SqlCommand(nom, Connexion)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            
+            if (parametres != null)
+            {
+                for (int i = 0; i < parametres.Length; i++)
+                {
+                    Parametre p = parametres[i];
+
+                    SqlParameter parametre = new SqlParameter(p.NomSQL, p.TypeSQL, p.Taille)
+                    {
+                        Value = p.Valeur
+                    };
+
+                    commande.Parameters.Add(parametre);
+                }
+            }
+            
+            return commande.ExecuteReader();
         }
     }
 }
