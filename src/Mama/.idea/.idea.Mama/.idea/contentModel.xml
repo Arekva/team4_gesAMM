@@ -10,8 +10,12 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Etape.cs" t="Include" />
         <e p="Famille.cs" t="Include" />
-        <e p="Form1.cs" t="Include" />
-        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Frm_acceuil.cs" t="Include" />
+        <e p="Frm_acceuil.Designer.cs" t="Include" />
+        <e p="Frm_acceuil.resx" t="Include" />
+        <e p="Frm_connexion.cs" t="Include" />
+        <e p="Frm_connexion.Designer.cs" t="Include" />
+        <e p="Frm_connexion.resx" t="Include" />
         <e p="Globale.cs" t="Include" />
         <e p="Mama.csproj" t="IncludeRecursive" />
         <e p="Medicament.cs" t="Include" />

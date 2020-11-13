@@ -52,8 +52,6 @@ namespace Mama
         /// <summary>
         /// Récuperer toutes les familles dans la base.
         /// </summary>
-        /// <returns></returns>
-        [Obsolete("Non testé !")]
         public static ReadOnlyCollection<Famille> ToutesLesFamilles()
         {
             List<Famille> familles = new List<Famille>();
@@ -63,17 +61,11 @@ namespace Mama
 
             while (reader.Read())
             {
-                int? nbMediAmm = null;
-                if (reader["FAM_nbMediAmm"] == null)
-                {
-                    nbMediAmm = int.Parse(reader["FAM_nbMediAmm"].ToString());
-                }
-
                 // récupérer toutes les familles une par une.
                 familles.Add(new Famille(
                     reader["FAM_code"].ToString(),
                     reader["FAM_libelle"].ToString(),
-                    nbMediAmm
+                    int.Parse(reader["FAM_nbMediAmm"].ToString())
                 ));
             }
             
