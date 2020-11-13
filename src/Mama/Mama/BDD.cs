@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
+using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace Mama
 {
@@ -40,6 +43,8 @@ namespace Mama
         
         static BDD()
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
             Connecter();
         }
 
