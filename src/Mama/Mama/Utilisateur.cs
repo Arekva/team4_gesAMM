@@ -29,6 +29,6 @@ namespace Mama
 
         public void setId(int leId) { this.id = leId; }
         public void setLogin(string leLogin) { this.login = leLogin; }
-        public void setMdp(string leMdp) { this.mdp = leMdp.}
+        public void setMdp(string leMdp) { this.mdp = leMdp; }
     }
 }

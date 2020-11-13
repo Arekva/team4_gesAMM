@@ -29,7 +29,7 @@ namespace Mama
         {
             get
             {
-                return @$"Data Source={NomPC}\SQLEXPRESS;Initial Catalog={NomBase};Integrated Security=True;MultipleActiveResultSets=True";
+                return $@"Data Source={NomPC}\SQLEXPRESS;Initial Catalog={NomBase};Integrated Security=True;MultipleActiveResultSets=True";
             }
         }
 
