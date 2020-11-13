@@ -51,6 +51,7 @@
             this.Controls.Add(this.lbLogin);
             this.Name = "Frm_connexion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_connexion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

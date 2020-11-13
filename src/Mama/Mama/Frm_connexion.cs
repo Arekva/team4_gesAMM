@@ -16,5 +16,10 @@ namespace Mama
         {
             InitializeComponent();
         }
+
+        private void Frm_connexion_Load(object sender, EventArgs e)
+        {
+            /*tbLogin.Location = new Point((950 - (tbLogin.Size.Width / 2)), 300);*/
+        }
     }
 }
