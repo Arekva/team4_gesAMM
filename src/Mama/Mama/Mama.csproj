@@ -49,11 +49,11 @@
     <Compile Include="BDD.cs" />
     <Compile Include="Etape.cs" />
     <Compile Include="Famille.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Frm_acceuil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Frm_acceuil.Designer.cs">
+      <DependentUpon>Frm_acceuil.cs</DependentUpon>
     </Compile>
     <Compile Include="Globale.cs" />
     <Compile Include="Medicament.cs" />
@@ -62,6 +62,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Subir.cs" />
     <Compile Include="Utilisateur.cs" />
+    <EmbeddedResource Include="Frm_acceuil.resx">
+      <DependentUpon>Frm_acceuil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
