@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="BDD.cs" />
     <Compile Include="Etape.cs" />
-    <Compile Include="EtapeNormee.cs" />
     <Compile Include="Famille.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

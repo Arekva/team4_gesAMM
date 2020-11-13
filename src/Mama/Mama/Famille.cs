@@ -14,20 +14,6 @@ namespace Mama
     public class Famille
     {
         /// <summary>
-        /// Identifiant unique de la famille.
-        /// </summary>
-        public string Code { get; } = null;
-
-        /// <summary>
-        /// Nom du médicament.
-        /// </summary>
-        public string Libelle { get; } = null;
-
-        /// <summary>
-        /// Nombre de médicament qui ont reçu une validation AMM.
-        /// </summary>
-        public int NombreAMM { get; set; } = 0;
-        /// <summary>
         /// Nouvelle famille où tous les paramètres sont fournis.
         /// </summary>
         /// <param name="code">Le code identifiant de la famille.</param>
@@ -35,10 +21,31 @@ namespace Mama
         /// <param name="nbMediAmm">Le nombre de médicaments qui ont eu une validation</param>
         public Famille(string code, string libelle, int nbMediAmm)
         {
-            Code = code;
-            Libelle = libelle;
-            NombreAMM = nbMediAmm;
+            _Code = code;
+            _Libelle = libelle;
+            _NombreAMM = nbMediAmm;
         }
+        
+        private string _Code;
+        private string _Libelle;
+        private int _NombreAMM;
+
+        public string getCode()
+        {
+            return this._Code;
+        }
+
+        public string getLibelle()
+        {
+            return this._Libelle;
+        }
+
+        public int NombreAMM()
+        {
+            return this._NombreAMM;
+        }
+        
+        
         
         
 #region Fonctions SQL

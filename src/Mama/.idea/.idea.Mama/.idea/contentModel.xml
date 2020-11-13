@@ -9,7 +9,6 @@
         <e p="BDD.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Etape.cs" t="Include" />
-        <e p="EtapeNormee.cs" t="Include" />
         <e p="Famille.cs" t="Include" />
         <e p="Form1.cs" t="Include" />
         <e p="Form1.Designer.cs" t="Include" />
