@@ -14,7 +14,15 @@ namespace Mama
         private string codeDepotLegal;
 
 
-        public Subir(DateTime ladecision, Etape laEtape,
+        public Subir(DateTime ladecision, Etape laEtape,int lidDecision,string leCodeDepotLegal)
+        {
+            this.dateDecision = ladecision;
+            this.lEtape = laEtape;
+            this.idDecision = lidDecision;
+            this.codeDepotLegal = leCodeDepotLegal;
+        }
+
+
 
 
 
