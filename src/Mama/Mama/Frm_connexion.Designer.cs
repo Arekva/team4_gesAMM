@@ -29,18 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_connexion));
+            this.lbLogin = new System.Windows.Forms.Label();
+            this.tbLogin = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // lbLogin
+            // 
+            resources.ApplyResources(this.lbLogin, "lbLogin");
+            this.lbLogin.Name = "lbLogin";
+            // 
+            // tbLogin
+            // 
+            resources.ApplyResources(this.tbLogin, "tbLogin");
+            this.tbLogin.Name = "tbLogin";
             // 
             // Frm_connexion
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tbLogin);
+            this.Controls.Add(this.lbLogin);
             this.Name = "Frm_connexion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lbLogin;
+        private System.Windows.Forms.TextBox tbLogin;
     }
 }
