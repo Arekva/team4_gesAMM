@@ -22,9 +22,19 @@ namespace Mama
             this.codeDepotLegal = leCodeDepotLegal;
         }
 
+        //get
 
+        public DateTime getDateDecision() { return this.dateDecision; }
+        public Etape getEtape() { return this.lEtape; }
+        public int getidDecision() { return this.idDecision; }
+        public string getCodeDepot() { return this.codeDepotLegal; }
 
+        //set
 
+        public void setDateDecision(DateTime date) { this.dateDecision = date; }
+        public void setEtape(Etape etape) { this.lEtape = etape; }
+        public void setidDecision(int id) { this.idDecision = id; }
+        public void setCodeDepot(string code) { this.codeDepotLegal = code; }
 
     }
 
