@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
+using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace Mama
 {
@@ -29,7 +32,7 @@ namespace Mama
         {
             get
             {
-                return @$"Data Source={NomPC}\SQLEXPRESS;Initial Catalog={NomBase};Integrated Security=True;MultipleActiveResultSets=True";
+                return $@"Data Source={NomPC}\SQLEXPRESS;Initial Catalog={NomBase};Integrated Security=True;MultipleActiveResultSets=True";
             }
         }
 
@@ -40,6 +43,8 @@ namespace Mama
         
         static BDD()
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
             Connecter();
         }
 

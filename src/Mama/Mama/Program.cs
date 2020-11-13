@@ -16,7 +16,7 @@ namespace Mama
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_accueil());
+            Application.Run(new Frm_connexion());
         }
     }
 }

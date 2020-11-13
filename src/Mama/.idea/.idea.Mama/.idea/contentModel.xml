@@ -8,13 +8,17 @@
         <e p="App.config" t="Include" />
         <e p="BDD.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Decision.cs" t="Include" />
         <e p="Etape.cs" t="Include" />
         <e p="Famille.cs" t="Include" />
-        <e p="Form1.cs" t="Include" />
-        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Frm_acceuil.cs" t="Include" />
+        <e p="Frm_acceuil.Designer.cs" t="Include" />
+        <e p="Frm_acceuil.resx" t="Include" />
+        <e p="Frm_connexion.cs" t="Include" />
+        <e p="Frm_connexion.Designer.cs" t="Include" />
+        <e p="Frm_connexion.resx" t="Include" />
         <e p="Globale.cs" t="Include" />
         <e p="Mama.csproj" t="IncludeRecursive" />
+        <e p="Medicament.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Parametre.cs" t="Include" />
         <e p="Program.cs" t="Include" />
@@ -26,6 +30,7 @@
           <e p="Settings.settings" t="Include" />
         </e>
         <e p="Subir.cs" t="Include" />
+        <e p="Utilisateur.cs" t="Include" />
       </e>
       <e p="Mama.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

@@ -19,7 +19,7 @@ namespace Mama
         /// <param name="code">Le code identifiant de la famille.</param>
         /// <param name="libelle">Le libelle de la famille.</param>
         /// <param name="nbMediAmm">Le nombre de médicaments qui ont eu une validation</param>
-        public Famille(string code, string libelle, int nbMediAmm)
+        public Famille(string code, string libelle, int? nbMediAmm)
         {
             _Code = code;
             _Libelle = libelle;
@@ -28,7 +28,7 @@ namespace Mama
         
         private string _Code;
         private string _Libelle;
-        private int _NombreAMM;
+        private int? _NombreAMM;
 
         public string getCode()
         {
@@ -40,7 +40,7 @@ namespace Mama
             return this._Libelle;
         }
 
-        public int NombreAMM()
+        public int? NombreAMM()
         {
             return this._NombreAMM;
         }
@@ -52,25 +52,23 @@ namespace Mama
         /// <summary>
         /// Récuperer toutes les familles dans la base.
         /// </summary>
-        /// <returns></returns>
-        [Obsolete("Non testé !")]
         public static ReadOnlyCollection<Famille> ToutesLesFamilles()
         {
             List<Famille> familles = new List<Famille>();
 
             //todo: changer le nom de la procédure.
-            SqlDataReader reader = BDD.LireProcedure("prc_familles");
+            SqlDataReader reader = BDD.LireProcedure("prc_toutes_familles");
+
             while (reader.Read())
             {
                 // récupérer toutes les familles une par une.
                 familles.Add(new Famille(
                     reader["FAM_code"].ToString(),
                     reader["FAM_libelle"].ToString(),
-                    int.Parse(reader["FAM_nbMediArm"].ToString())
-                    ));
+                    int.Parse(reader["FAM_nbMediAmm"].ToString())
+                ));
             }
-
-            BDD.LireProcedure("prc_test", new Parametre("@idTest", 5, 3));
+            
 
             return familles.AsReadOnly();
         }
