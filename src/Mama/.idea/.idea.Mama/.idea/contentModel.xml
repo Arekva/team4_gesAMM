@@ -8,6 +8,7 @@
         <e p="App.config" t="Include" />
         <e p="BDD.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Decision.cs" t="Include" />
         <e p="Etape.cs" t="Include" />
         <e p="Famille.cs" t="Include" />
         <e p="Form1.cs" t="Include" />
@@ -24,6 +25,7 @@
           <e p="Settings.Designer.cs" t="Include" />
           <e p="Settings.settings" t="Include" />
         </e>
+        <e p="Subir.cs" t="Include" />
       </e>
       <e p="Mama.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

@@ -23,11 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ab2decf-005e-4395-b568-d8c89224faa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Mama/Decision.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mama/Etape.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mama/Etape.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mama/EtapeNormee.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mama/Famille.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mama/Famille.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mama/Mama.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Mama/Mama.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +50,7 @@
         <option value="$PROJECT_DIR$/Mama/EtapeNormee.cs" />
         <option value="$PROJECT_DIR$/Mama/Etape.cs" />
         <option value="$PROJECT_DIR$/Mama/Famille.cs" />
+        <option value="$PROJECT_DIR$/Mama/Decision.cs" />
       </list>
     </option>
   </component>
@@ -99,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604661643498</updated>
       <workItem from="1604661652979" duration="8874000" />
-      <workItem from="1605261930068" duration="4372000" />
+      <workItem from="1605261930068" duration="5383000" />
     </task>
     <servers />
   </component>
