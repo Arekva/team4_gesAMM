@@ -8,6 +8,18 @@ namespace Mama
 {
     class Subir
     {
-
+        private DateTime dateDecision;
+        private int numEtape;
+        private int idDecision;
+        private string codeDepotLegal;
     }
+
+
+
+
+
+
+
+
+
 }
