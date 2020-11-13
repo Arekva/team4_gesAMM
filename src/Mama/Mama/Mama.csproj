@@ -55,6 +55,12 @@
     <Compile Include="Frm_acceuil.Designer.cs">
       <DependentUpon>Frm_acceuil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_connexion.Designer.cs">
+      <DependentUpon>Frm_connexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Globale.cs" />
     <Compile Include="Medicament.cs" />
     <Compile Include="Parametre.cs" />
@@ -64,6 +70,9 @@
     <Compile Include="Utilisateur.cs" />
     <EmbeddedResource Include="Frm_acceuil.resx">
       <DependentUpon>Frm_acceuil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_connexion.resx">
+      <DependentUpon>Frm_connexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
