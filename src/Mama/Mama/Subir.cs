@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mama
 {
-    class Subir
+    public class Subir
     {
         private DateTime dateDecision;
         private Etape lEtape;

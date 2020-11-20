@@ -11,7 +11,7 @@ namespace Mama
     /// </summary>
     /// \Author Gaétan Fontan
 
-    class Medicament
+    public class Medicament
     {
         private string depotLegal; // clé primaire
         private string nomCommercial;
@@ -20,7 +20,7 @@ namespace Mama
         private string contreIndication;
         private string AMM; //code de l'autorisation de la mise en marché est null si le medoc n'est pas autoriser
                             //NULL A SA CREATION
-        private List<Subir> toutesLesEtapes; // il s'agit de la liste de toutes les étapes de verification nécessaire
+        private List<Subir> leWorkFlow; // il s'agit de la liste de toutes les étapes de verification nécessaire
         private Subir DerniereEtape; //il s'agit de la derniere étape de test effectuer 
                                      //NULL A SA CREATION
         private Famille laFamille; // la famille du medicament
@@ -46,6 +46,7 @@ namespace Mama
             this.laFamille = laaFamille;
             this.AMM = null;
             this.DerniereEtape = null;
+            this.leWorkFlow = new List<Subir>();
         }
 
         /// <summary>
