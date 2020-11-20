@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Mama
 {
+    /// <summary>
+    /// Nouvelle famille où tous les paramètres sont fournis.
+    /// </summary>
+    /// \Author Gaétan Fontan
+
     class Medicament
     {
         private string depotLegal; // clé primaire
@@ -19,7 +24,17 @@ namespace Mama
                                      //NULL A SA CREATION
         private Famille laFamille; // la famille du medicament
 
+        /// <summary>
+        /// Peremet l'instanciation de la classe Medicament
+        /// </summary>
 
+        /// <param name="leDepot">Il s'agit de la clé primaire, et le code de la classe Médicament.</param>
+        /// <param name="leNomCommercial">Il s'agit du nom du médicament tel qu'il sera vendu</param>
+        /// <param name="laComposition"> Resume la composition du medicaments</param>
+        /// <param name="leEffet"> L'effet théorique du médicament suite a sa prise (par exemple : soulage les douleurs de dos)</param>
+        /// <param name="laContreIndication"> Précise dans quelle conditions le médicaments ne doit pas être pris</param>
+        /// <param name="laaFamille"> Précise la famille du médicament </param>
+        /// \Author Gaétan Fontan
         public Medicament(string leDepot, string leNomCommercial, string laComposition, string leEffet,
             string laContreIndication, Famille laaFamille)
         {
