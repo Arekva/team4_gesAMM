@@ -50,13 +50,13 @@ namespace Mama
         
 #region Fonctions SQL
         /// <summary>
-        /// Récuperer toutes les familles dans la base.
+        /// Récuperer toutes les familles depuis la base.
         /// </summary>
+        /// <returns>Une liste de famille en lecture-seule.</returns>
         public static ReadOnlyCollection<Famille> ToutesLesFamilles()
         {
             List<Famille> familles = new List<Famille>();
-
-            //todo: changer le nom de la procédure.
+            
             SqlDataReader reader = BDD.LireProcedure("prc_toutes_familles");
 
             while (reader.Read())

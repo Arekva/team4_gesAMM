@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_connexion));
             this.lbLogin = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.lbPassword = new System.Windows.Forms.Label();
+            this.btConnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbLogin
@@ -43,10 +46,29 @@
             resources.ApplyResources(this.tbLogin, "tbLogin");
             this.tbLogin.Name = "tbLogin";
             // 
+            // tbPassword
+            // 
+            resources.ApplyResources(this.tbPassword, "tbPassword");
+            this.tbPassword.Name = "tbPassword";
+            // 
+            // lbPassword
+            // 
+            resources.ApplyResources(this.lbPassword, "lbPassword");
+            this.lbPassword.Name = "lbPassword";
+            // 
+            // btConnect
+            // 
+            resources.ApplyResources(this.btConnect, "btConnect");
+            this.btConnect.Name = "btConnect";
+            this.btConnect.UseVisualStyleBackColor = true;
+            // 
             // Frm_connexion
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btConnect);
+            this.Controls.Add(this.lbPassword);
+            this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.lbLogin);
             this.Name = "Frm_connexion";
@@ -61,5 +83,8 @@
 
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Label lbPassword;
+        private System.Windows.Forms.Button btConnect;
     }
 }

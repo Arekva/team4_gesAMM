@@ -19,7 +19,13 @@ namespace Mama
 
         private void Frm_connexion_Load(object sender, EventArgs e)
         {
-            /*tbLogin.Location = new Point((950 - (tbLogin.Size.Width / 2)), 300);*/
+            int WScreen = Screen.PrimaryScreen.Bounds.Width;
+            int HScreen = Screen.PrimaryScreen.Bounds.Height;
+            tbLogin.Location = new Point(WScreen/2 - (tbLogin.Size.Width / 2), 300);
+            lbLogin.Location = new Point(WScreen/2- (lbLogin.Size.Width / 2), 250);
+            tbPassword.Location = new Point(WScreen/2- (tbPassword.Size.Width / 2), 400);
+            lbPassword.Location = new Point(WScreen/2- (lbPassword.Size.Width / 2), 350);
+            btConnect.Location = new Point(WScreen/2- (btConnect.Size.Width / 2), 450);
         }
     }
 }
