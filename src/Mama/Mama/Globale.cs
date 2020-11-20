@@ -13,7 +13,11 @@ namespace Mama
         /// Toutes les familles de médicament.
         /// </summary>
         public static Dictionary<string, Famille> Familles { get; } = new Dictionary<string, Famille>();
-        public static Dictionary<string, Medicament> lesMedicaments;
+        public static Dictionary<string, Medicament> Medicaments;
+
+        public static Dictionary<string, Etape> Etapes;
+
+        public static Dictionary<string, Decision> Decisions;
         // le constructeur statique s'éxécute dès que quelque chose accède à cette classe.
         static Globale()
         {
