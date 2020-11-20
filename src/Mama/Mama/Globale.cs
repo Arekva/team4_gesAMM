@@ -7,12 +7,14 @@ using System.Data.SqlClient;
 
 namespace Mama
 {
-    public static class Globale
+    static class Globale
     {
         /// <summary>
         /// Toutes les familles de médicament.
         /// </summary>
         public static Dictionary<string, Famille> Familles { get; }
+        public static Dictionary<string, Medicament> lesMedicaments;
+
         // le constructeur statique s'éxécute dès que quelque chose accède à cette classe.
         static Globale()
         {
