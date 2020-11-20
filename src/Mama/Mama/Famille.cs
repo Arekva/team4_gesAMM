@@ -57,29 +57,7 @@ namespace Mama
         
         
 #region Fonctions SQL
-        /// <summary>
-        /// Récuperer toutes les familles depuis la base.
-        /// </summary>
-        /// <returns>Une liste de famille en lecture-seule.</returns>
-        public static ReadOnlyCollection<Famille> ToutesLesFamilles()
-        {
-            List<Famille> familles = new List<Famille>();
-            
-            SqlDataReader reader = BDD.LireProcedure("prc_toutes_familles");
-
-            while (reader.Read())
-            {
-                // récupérer toutes les familles une par une.
-                familles.Add(new Famille(
-                    reader["FAM_code"].ToString(),
-                    reader["FAM_libelle"].ToString(),
-                    int.Parse(reader["FAM_nbMediAmm"].ToString())
-                ));
-            }
-            
-
-            return familles.AsReadOnly();
-        }
+        
 #endregion
     }
 }

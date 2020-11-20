@@ -17,7 +17,7 @@ namespace Mama
         // le constructeur statique s'éxécute dès que quelque chose accède à cette classe.
         static Globale()
         {
-            foreach (Famille famille in Famille.ToutesLesFamilles())
+            foreach (Famille famille in BDD.ToutesLesFamilles())
             {
                 Familles.Add(famille.getCode(), famille);
             }
