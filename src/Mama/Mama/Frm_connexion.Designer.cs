@@ -35,6 +35,7 @@
             this.lbPassword = new System.Windows.Forms.Label();
             this.btConnect = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.lbTest = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,11 +82,18 @@
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.TabStop = false;
             // 
+            // lbTest
+            // 
+            this.lbTest.FormattingEnabled = true;
+            resources.ApplyResources(this.lbTest, "lbTest");
+            this.lbTest.Name = "lbTest";
+            // 
             // Frm_connexion
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lbTest);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.btConnect);
             this.Controls.Add(this.lbPassword);
@@ -109,5 +117,6 @@
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.Button btConnect;
         private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.ListBox lbTest;
     }
 }
