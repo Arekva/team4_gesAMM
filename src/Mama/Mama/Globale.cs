@@ -12,18 +12,14 @@ namespace Mama
         /// <summary>
         /// Toutes les familles de médicament.
         /// </summary>
-        public static Dictionary<string, Famille> Familles { get; }
+        public static Dictionary<string, Famille> Familles { get; } = new Dictionary<string, Famille>();
         public static Dictionary<string, Medicament> lesMedicaments;
-
         // le constructeur statique s'éxécute dès que quelque chose accède à cette classe.
         static Globale()
         {
-            Famille[] familles = Famille.ToutesLesFamilles().ToArray();
-            Familles = new Dictionary<string, Famille>(familles.Length);
-            
-            for (int i = 0; i < familles.Length; i++)
+            foreach (Famille famille in Famille.ToutesLesFamilles())
             {
-                Familles.Add(familles[i].getCode(), familles[i]);
+                Familles.Add(famille.getCode(), famille);
             }
         }
     }

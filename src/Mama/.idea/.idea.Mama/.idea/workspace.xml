@@ -25,6 +25,8 @@
     <list default="true" id="0ab2decf-005e-4395-b568-d8c89224faa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mama/Famille.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mama/Famille.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mama/Globale.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mama/Globale.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mama/Parametre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mama/Parametre.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +40,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3C28CBF-769E-4102-A15A-10BAE657E531/4c/bdb26dd8/SqlCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Mama/Decision.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ED704B24-FB4A-4A3F-A1B8-5220BAED64CE/ec/c0776a19/Number.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB3709D4-3DAE-4F5F-B978-5D5202B86B97/f5/770bcbf5/Decimal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3DFCE41-AEBE-41F9-98F3-FDD1278662FA/d8/3f738408/SqlParameter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3C28CBF-769E-4102-A15A-10BAE657E531/58/c382b065/FieldNameLookup.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -46,7 +49,6 @@
       <list>
         <option value="$PROJECT_DIR$/Mama/Program.cs" />
         <option value="$PROJECT_DIR$/Mama/Medicament.cs" />
-        <option value="$PROJECT_DIR$/Mama/Parametre.cs" />
         <option value="$PROJECT_DIR$/Mama/EtapeNormee.cs" />
         <option value="$PROJECT_DIR$/Mama/Etape.cs" />
         <option value="$PROJECT_DIR$/Mama/Decision.cs" />
@@ -54,8 +56,11 @@
         <option value="$PROJECT_DIR$/Mama/Debug.cs" />
         <option value="$PROJECT_DIR$/Mama/BDD.cs" />
         <option value="$PROJECT_DIR$/Mama/Form1.cs" />
-        <option value="$PROJECT_DIR$/Mama/Globale.cs" />
         <option value="$PROJECT_DIR$/Mama/Famille.cs" />
+        <option value="$PROJECT_DIR$/Mama/Frm_connexion.cs" />
+        <option value="$PROJECT_DIR$/Mama/Frm_acceuil.cs" />
+        <option value="$PROJECT_DIR$/Mama/Parametre.cs" />
+        <option value="$PROJECT_DIR$/Mama/Globale.cs" />
       </list>
     </option>
   </component>
@@ -108,6 +113,7 @@
       <updated>1604661643498</updated>
       <workItem from="1604661652979" duration="8874000" />
       <workItem from="1605261930068" duration="5383000" />
+      <workItem from="1605877247940" duration="2541000" />
     </task>
     <servers />
   </component>
@@ -137,22 +143,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="406" height="646" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1605281849162" />
-    <state width="1877" height="92" key="GridCell.Tab.0.bottom" timestamp="1605284824112">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1605878863385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="92" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605284824112" />
-    <state width="1877" height="92" key="GridCell.Tab.0.center" timestamp="1605284824112">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605878863385" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1605878863385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="92" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605284824112" />
-    <state width="1877" height="92" key="GridCell.Tab.0.left" timestamp="1605284824112">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605878863385" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1605878863385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="92" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605284824112" />
-    <state width="1877" height="92" key="GridCell.Tab.0.right" timestamp="1605284824112">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605878863385" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1605878863385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="92" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605284824112" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605878863385" />
     <state width="1877" height="92" key="GridCell.Tab.1.bottom" timestamp="1605284824112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

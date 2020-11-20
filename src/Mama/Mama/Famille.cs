@@ -34,13 +34,21 @@ namespace Mama
         {
             return this._Code;
         }
+        public void setCode(string code)
+        {
+            this._Code = code;
+        }
 
         public string getLibelle()
         {
             return this._Libelle;
         }
+        public void setLibelle(string libelle)
+        {
+            this._Libelle = libelle;
+        }
 
-        public int? NombreAMM()
+        public int? getNombreAMM()
         {
             return this._NombreAMM;
         }

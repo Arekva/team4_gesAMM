@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Security.AccessControl;
 using SqlT = System.Data.SqlDbType;
 
 namespace Mama
@@ -40,6 +41,8 @@ namespace Mama
             
             if (valeur is string) TypeSQL = SqlT.Char;
             else if (valeur is int) TypeSQL = SqlT.Int;
+            else if (valeur is decimal) TypeSQL = SqlT.Money;
+            else if (valeur is DateTime) TypeSQL = SqlT.DateTime;
             else // si y'a aucun type correspondant, char par defaut
             {
                 TypeSQL = SqlT.Char;
