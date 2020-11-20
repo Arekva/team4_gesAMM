@@ -51,11 +51,14 @@ namespace Mama
         /// Fonction permetant d'obtenir (de retourné) le code du dépot legal du médicament
         /// </summary>
         /// <returns> retourne une chaine de caractere </returns>
-        /// \author gaétan fontan 
-        /// \bug Ne retourne pas toujours le bond dépot
+        /// \author gaétan fontan \n \n
+        /// \emoji :smile: veuillez telecharger le script pour rajouter des smiley
         /// \date 20/11/2022
-        /// \anchor c'est une ancre en anglais
-        /// \code c'est codé en c#
+        /// \bug La fonction ne retourne pas toujours le bon résultat
+        /// \code{.cs} //ceci est un commentaire codé en c# \endcode
+        /// \details Ceci est l'explication détailler de la fonction getDepotLegal : la fonction est composé des lettres g, e, t, D, e (un deuxieme e), p, o, t, l , e , g , a, l \n \n
+        /// \anchor Ceci Ceci est un pied de page
+
         public string getDepotLegal() { return this.depotLegal; }
         public string getNomCommercial() { return this.nomCommercial; }
         public string getComposition() { return this.composition; }
@@ -70,8 +73,6 @@ namespace Mama
         /// <param name="leCode">Correspond au nouveau code voulu, c'est une chaine de caractere</param>
         /// \author Gaétan Fontan
         /// \date 20/11/2022
-        /// \anchor c'est une ancre en anglais
-        /// \code c'est codé en c#
         public void setDepotLogal(string leCode) { this.depotLegal = leCode; }
         public void setNomCommercial(string leNom) { this.nomCommercial = leNom; }
         public void setComposition(string laCompo) { this.composition= laCompo; }
