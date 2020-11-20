@@ -49,12 +49,6 @@
     <Compile Include="BDD.cs" />
     <Compile Include="Etape.cs" />
     <Compile Include="Famille.cs" />
-    <Compile Include="Frm_acceuil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_acceuil.Designer.cs">
-      <DependentUpon>Frm_acceuil.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm_connexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,9 +62,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Subir.cs" />
     <Compile Include="Utilisateur.cs" />
-    <EmbeddedResource Include="Frm_acceuil.resx">
-      <DependentUpon>Frm_acceuil.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_connexion.resx">
       <DependentUpon>Frm_connexion.cs</DependentUpon>
     </EmbeddedResource>
