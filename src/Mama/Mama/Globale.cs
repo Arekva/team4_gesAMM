@@ -13,7 +13,7 @@ namespace Mama
         /// Toutes les familles de médicament.
         /// </summary>
         public static Dictionary<string, Famille> Familles { get; } = new Dictionary<string, Famille>();
-        public static Dictionary<string, Medicament> Medicaments;
+        public static Dictionary<string, Medicament> Medicaments = new Dictionary<string, Medicament>(); 
 
         public static Dictionary<string, Etape> Etapes;
 
