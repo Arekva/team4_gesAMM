@@ -57,7 +57,7 @@ namespace Mama
         {
             List<Famille> familles = new List<Famille>();
             
-            SqlDataReader reader = BDD.LireProcedure("prc_toutes_familles", new Parametre("@aaa", 2, 5));
+            SqlDataReader reader = BDD.LireProcedure("prc_toutes_familles");
 
             while (reader.Read())
             {
