@@ -25,6 +25,12 @@ namespace Mama
             {
                 Familles.Add(famille.getCode(), famille);
             }
+
+
+            foreach(Medicament leMedo in BDD.tousLesMedicaments())
+            {
+                Medicaments.Add(leMedo.getDepotLegal(), leMedo);
+            }
             
         }
     }
