@@ -49,7 +49,6 @@
             // 
             resources.ApplyResources(this.tbLogin, "tbLogin");
             this.tbLogin.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLogin.Name = "tbLogin";
             // 
             // tbPassword
