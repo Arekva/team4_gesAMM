@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Mama
 {
     /// <summary>
-    /// Nouvelle famille où tous les paramètres sont fournis.
+    /// Classe medicament constituer de tous les attributs lié aux médicaments.
     /// </summary>
     /// \Author Gaétan Fontan
 
@@ -27,7 +27,6 @@ namespace Mama
         /// <summary>
         /// Peremet l'instanciation de la classe Medicament
         /// </summary>
-
         /// <param name="leDepot">Il s'agit de la clé primaire, et le code de la classe Médicament.</param>
         /// <param name="leNomCommercial">Il s'agit du nom du médicament tel qu'il sera vendu</param>
         /// <param name="laComposition"> Resume la composition du medicaments</param>
@@ -48,7 +47,13 @@ namespace Mama
             this.DerniereEtape = null;
         }
 
-        private string getDepotLogal() { return this.depotLegal; }
+        /// <summary>
+        /// Fonction permetant d'obtenir (de retourné) le code du dépot legal du médicament
+        /// </summary>
+        /// <returns> retourne une chaine de caractere </returns>
+        /// \author gaétan fontan 
+        /// \emoji :smile:
+        private string getDepotLegal() { return this.depotLegal; }
         private string getNomCommercial() { return this.nomCommercial; }
         private string getComposition() { return this.composition; }
         private string getContreIndication() { return this.contreIndication; }
@@ -56,7 +61,12 @@ namespace Mama
         private Etape getDerniereEtape() { return this.DerniereEtape; }
         private Famille getFamille() { return this.laFamille; }
 
-
+        /// <summary>
+        /// Permet d'attribuer le code du dépot légal au médicament
+        /// </summary>
+        /// <param name="leCode">Correspond au nouveau code voulu, c'est une chaine de caractere</param>
+        /// \author Gaétan Fontan
+        /// \date 20/11/2022
         private void setDepotLogal(string leCode) { this.depotLegal = leCode; }
         private void setNomCommercial(string leNom) { this.nomCommercial = leNom; }
         private void setComposition(string laCompo) { this.composition= laCompo; }
