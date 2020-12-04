@@ -16,5 +16,20 @@ namespace Mama
         {
             InitializeComponent();
         }
+
+        private void C_NombreMedicaments_Form_Load(object sender, EventArgs e)
+        {
+            
+            foreach (string laClef in Globale.Familles.Keys)
+            {
+                ListViewItem lvi = new ListViewItem();
+
+                lvi.Text = Globale.Familles[laClef].getCode();
+                lvi.SubItems.Add(Globale.Familles[laClef].getLibelle());
+                lvi.SubItems.Add(Globale.Familles[laClef].getNombreAMM().ToString());
+
+                lvFamille.Items.Add(lvi);
+            }
+        }
     }
 }
