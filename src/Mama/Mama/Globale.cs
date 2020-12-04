@@ -32,11 +32,11 @@ namespace Mama
             {
                 Medicaments.Add(leMedo.getDepotLegal(), leMedo);
             }
-            /* rajouter aprés la procédure tous les medicaments
+            
             foreach(Decision laDescision in BDD.toutesLesDecision())
             {
                 Etapes.Add(laDescision.getID(), laDescision);
-            }*/
+            }
         }
     }
 }
