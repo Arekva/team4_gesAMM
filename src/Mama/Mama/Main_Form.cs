@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Mama
 {
-    public partial class Main : Form
+    public partial class Main_Form : Form
     {
-        public Main()
+        public Main_Form()
         {
             InitializeComponent();
         }

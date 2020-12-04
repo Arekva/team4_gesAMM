@@ -1,6 +1,6 @@
 ﻿namespace Mama
 {
-    partial class Main
+    partial class Main_Form
     {
         /// <summary>
         /// Required designer variable.

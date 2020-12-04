@@ -47,6 +47,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDD.cs" />
+    <Compile Include="C_MedicamentsEnCours_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_MedicamentsEnCours_Form.Designer.cs">
+      <DependentUpon>C_MedicamentsEnCours_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_NombreMedicaments_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_NombreMedicaments_Form.Designer.cs">
+      <DependentUpon>C_NombreMedicaments_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Workflow_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Workflow_Form.Designer.cs">
+      <DependentUpon>C_Workflow_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Decision.cs" />
     <Compile Include="Etape.cs" />
     <Compile Include="Famille.cs" />
@@ -57,11 +75,29 @@
       <DependentUpon>Frm_connexion.cs</DependentUpon>
     </Compile>
     <Compile Include="Globale.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="I_Ajout_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="I_Ajout_Form.Designer.cs">
+      <DependentUpon>I_Ajout_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="I_Maj_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="I_Maj_Form.Designer.cs">
+      <DependentUpon>I_Maj_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="I_Saisie_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="I_Saisie_Form.Designer.cs">
+      <DependentUpon>I_Saisie_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Medicament.cs" />
     <Compile Include="Parametre.cs" />
@@ -72,8 +108,8 @@
     <EmbeddedResource Include="Frm_connexion.resx">
       <DependentUpon>Frm_connexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

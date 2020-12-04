@@ -35,17 +35,19 @@ namespace Mama
 
 
             //test
+            /*
             foreach (int laClef in Globale.Decisions.Keys)
             {
                 lbTest.Items.Add(Globale.Decisions[laClef].getLibelle());
-            }
+            }*/
             
 
         }
 
         private void btConnect_Click(object sender, EventArgs e)
         {
-            
+            Main_Form laForm = new Main_Form();
+            laForm.Show();
         }
     }
 }
