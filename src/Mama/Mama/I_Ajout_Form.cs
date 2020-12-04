@@ -47,14 +47,14 @@ namespace Mama
                     else { i++; }
                 }
 
-                Medicament leMedoc = new Medicament(tbDepotLegal.Text.ToUpper(), tbNomCommerciale.Text, tbCompostion.Text, tbEffets.Text, tbContreIndication.Text, Globale.Familles[laClefFamille]);
+                Medicament leMedoc = new Medicament(tbDepotLegal.Text.ToUpper(), tbNomCommerciale.Text.ToUpper(), tbCompostion.Text, tbEffets.Text, tbContreIndication.Text, Globale.Familles[laClefFamille]);
                 Globale.Medicaments.Add(tbDepotLegal.Text.ToUpper(), leMedoc);
-                BDD.LireProcedure("prc_nouveau_medicament", new Parametre("@depotLegal",tbDepotLegal.Text,50),
-                    new Parametre("@nomCommerciale", tbNomCommerciale.Text, 50),
+                BDD.LireProcedure("prc_nouveau_medicament", new Parametre("@depotLegal",tbDepotLegal.Text.ToUpper(),50),
+                    new Parametre("@nomCommerciale", tbNomCommerciale.Text.ToUpper(), 50),
                     new Parametre("@composition", tbCompostion.Text, 255), 
                     new Parametre("@effet", tbEffets.Text, 255), 
                     new Parametre("@contreIndication", tbContreIndication.Text, 255), 
-                    new Parametre("@codeFamille",laClefFamille, 50));
+                    new Parametre("@codeFamille",laClefFamille.ToUpper(), 50));
                 MessageBox.Show("Succés", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
