@@ -34,7 +34,7 @@
             this.FamilleNbrMedicamentAutorise = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbFamilleSelection = new System.Windows.Forms.TextBox();
             this.lbFamilleSelectionnée = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvLesMedicaments = new System.Windows.Forms.ListView();
             this.MedicamentName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btChercherMedicament = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -88,17 +88,17 @@
             this.lbFamilleSelectionnée.TabIndex = 2;
             this.lbFamilleSelectionnée.Text = "CodeFamille selectionnée :";
             // 
-            // listView1
+            // lvLesMedicaments
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvLesMedicaments.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.MedicamentName});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(506, 184);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(174, 357);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvLesMedicaments.FullRowSelect = true;
+            this.lvLesMedicaments.Location = new System.Drawing.Point(506, 184);
+            this.lvLesMedicaments.Name = "lvLesMedicaments";
+            this.lvLesMedicaments.Size = new System.Drawing.Size(174, 357);
+            this.lvLesMedicaments.TabIndex = 3;
+            this.lvLesMedicaments.UseCompatibleStateImageBehavior = false;
+            this.lvLesMedicaments.View = System.Windows.Forms.View.Details;
             // 
             // MedicamentName
             // 
@@ -123,7 +123,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1156, 599);
             this.Controls.Add(this.btChercherMedicament);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvLesMedicaments);
             this.Controls.Add(this.lbFamilleSelectionnée);
             this.Controls.Add(this.tbFamilleSelection);
             this.Controls.Add(this.lvFamille);
@@ -143,7 +143,7 @@
         private System.Windows.Forms.ColumnHeader FamilleNbrMedicamentAutorise;
         private System.Windows.Forms.TextBox tbFamilleSelection;
         private System.Windows.Forms.Label lbFamilleSelectionnée;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvLesMedicaments;
         private System.Windows.Forms.ColumnHeader MedicamentName;
         private System.Windows.Forms.Button btChercherMedicament;
     }
