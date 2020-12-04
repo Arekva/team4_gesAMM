@@ -21,5 +21,11 @@ namespace Mama
         {
 
         }
+
+        private void ajoutDunNouveauMédicamentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            I_Ajout_Form laForm = new I_Ajout_Form();
+            laForm.Show();
+        }
     }
 }

@@ -108,8 +108,9 @@
             this.ajoutDunNouveauMédicamentToolStripMenuItem.Name = "ajoutDunNouveauMédicamentToolStripMenuItem";
             this.ajoutDunNouveauMédicamentToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
             this.ajoutDunNouveauMédicamentToolStripMenuItem.Text = "Ajout d’un nouveau médicament";
+            this.ajoutDunNouveauMédicamentToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunNouveauMédicamentToolStripMenuItem_Click);
             // 
-            // Main
+            // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,7 +118,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Main";
+            this.Name = "Main_Form";
             this.Text = "Main";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
