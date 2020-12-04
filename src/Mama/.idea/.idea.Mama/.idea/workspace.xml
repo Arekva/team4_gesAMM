@@ -23,11 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ab2decf-005e-4395-b568-d8c89224faa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mama/Globale.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mama/Globale.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mama/Mama.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Mama/Mama.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mama/Medicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mama/Medicament.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +72,13 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlserver" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -114,7 +112,7 @@
       <updated>1604661643498</updated>
       <workItem from="1604661652979" duration="8874000" />
       <workItem from="1605261930068" duration="5383000" />
-      <workItem from="1605877247940" duration="5923000" />
+      <workItem from="1605877247940" duration="7343000" />
     </task>
     <servers />
   </component>
@@ -140,6 +138,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="895" y="254" width="845" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605886997161">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="895" y="254" width="845" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605886997161" />
     <state width="406" height="646" key="DebuggerActiveHint" timestamp="1605281849162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -248,10 +250,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1604674925094" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1604666920361">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1605885952525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604666920361" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605885952525" />
     <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1604678572688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
