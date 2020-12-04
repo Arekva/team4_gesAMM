@@ -29,11 +29,6 @@ namespace Mama
             lbLogin.BringToFront();
             pbLogo.Width = tbLogin.Width;
             pbLogo.Location = new Point(WScreen/2- (pbLogo.Size.Width / 2), 250 - pbLogo.Height /2);
-
-
-
-            
-
         }
 
         private void btConnect_Click(object sender, EventArgs e)
