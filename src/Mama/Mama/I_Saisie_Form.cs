@@ -17,10 +17,15 @@ namespace Mama
             InitializeComponent();
         }
 
+        Dictionary<string, Medicament> medocs = new Dictionary<string, Medicament>();
+        
+
         private void I_Saisie_Form_Load(object sender, EventArgs e)
         {
+
             foreach(var kvp in Globale.Medicaments)
             {
+                medocs.Add(kvp.Value.getNomCommercial(), kvp.Value);
                 cbMedocs.Items.Add(kvp.Value.getNomCommercial());
             }
 
@@ -29,11 +34,12 @@ namespace Mama
 
         private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Medicament medoc = Globale.Medicaments[cbMedocs.SelectedItem.ToString()];
-            
-            if(medoc.getDerniereEtape() == null || Globale.Decisions[medoc.getDerniereEtape().getidDecision()].getID() == 2)
+            Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];//Globale.Medicaments[cbMedocs.SelectedItem.ToString()];
+
+
+            if (medoc.getDerniereEtape() == null || Globale.Decisions[medoc.getDerniereEtape().getidDecision()].getID() == 2)
             {
-                MessageBox.Show("La dernière étape du médicament est refusée. Aucune autre étape ne peut être ajoutée.");
+                MessageBox.Show("La dernière étape du médicament est refusée. Aucune autre étape ne peut être ajoutée.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

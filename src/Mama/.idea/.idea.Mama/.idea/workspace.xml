@@ -23,7 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ab2decf-005e-4395-b568-d8c89224faa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mama/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mama/EtapeNormee.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +113,7 @@
       <workItem from="1604661652979" duration="8874000" />
       <workItem from="1605261930068" duration="5383000" />
       <workItem from="1605877247940" duration="7343000" />
+      <workItem from="1607098055098" duration="35000" />
     </task>
     <servers />
   </component>

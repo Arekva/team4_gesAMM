@@ -17,18 +17,44 @@ namespace Mama
             InitializeComponent();
         }
 
+        private string codeFamille = "";
+
+
+
         private void C_NombreMedicaments_Form_Load(object sender, EventArgs e)
         {
             
             foreach (string laClef in Globale.Familles.Keys)
             {
                 ListViewItem lvi = new ListViewItem();
-
+                
                 lvi.Text = Globale.Familles[laClef].getCode();
                 lvi.SubItems.Add(Globale.Familles[laClef].getLibelle());
                 lvi.SubItems.Add(Globale.Familles[laClef].getNombreAMM().ToString());
 
                 lvFamille.Items.Add(lvi);
+            }
+        }
+        
+
+        private void lvFamille_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            tbFamilleSelection.Text = lvFamille.FocusedItem.Text;
+            codeFamille = lvFamille.FocusedItem.Text;
+        }
+
+        private void btChercherMedicament_Click(object sender, EventArgs e)
+        {
+            foreach(string laClef in Globale.Medicaments.Keys)
+            {
+                if(Globale.Medicaments[laClef].getFamille().getCode() == codeFamille && Globale.Medicaments[laClef].getAMM() != "")
+                {
+                    ListViewItem lvi = new ListViewItem();
+
+                    lvi.Text = Globale.Familles[laClef].getCode();
+
+                    lvLesMedicaments.Items.Add(lvi);
+                }
             }
         }
     }

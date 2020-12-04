@@ -8,6 +8,13 @@
         <e p="App.config" t="Include" />
         <e p="BDD.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="C_MedicamentsEnCours_Form.cs" t="Include" />
+        <e p="C_MedicamentsEnCours_Form.Designer.cs" t="Include" />
+        <e p="C_NombreMedicaments_Form.cs" t="Include" />
+        <e p="C_NombreMedicaments_Form.Designer.cs" t="Include" />
+        <e p="C_NombreMedicaments_Form.resx" t="Include" />
+        <e p="C_Workflow_Form.cs" t="Include" />
+        <e p="C_Workflow_Form.Designer.cs" t="Include" />
         <e p="Decision.cs" t="Include" />
         <e p="Etape.cs" t="Include" />
         <e p="Famille.cs" t="Include" />
@@ -15,6 +22,18 @@
         <e p="Frm_connexion.Designer.cs" t="Include" />
         <e p="Frm_connexion.resx" t="Include" />
         <e p="Globale.cs" t="Include" />
+        <e p="Historique.cs" t="Include" />
+        <e p="I_Ajout_Form.cs" t="Include" />
+        <e p="I_Ajout_Form.Designer.cs" t="Include" />
+        <e p="I_Ajout_Form.resx" t="Include" />
+        <e p="I_Maj_Form.cs" t="Include" />
+        <e p="I_Maj_Form.Designer.cs" t="Include" />
+        <e p="I_Saisie_Form.cs" t="Include" />
+        <e p="I_Saisie_Form.Designer.cs" t="Include" />
+        <e p="I_Saisie_Form.resx" t="Include" />
+        <e p="Main_Form.cs" t="Include" />
+        <e p="Main_Form.Designer.cs" t="Include" />
+        <e p="Main_Form.resx" t="Include" />
         <e p="Mama.csproj" t="IncludeRecursive" />
         <e p="Medicament.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />

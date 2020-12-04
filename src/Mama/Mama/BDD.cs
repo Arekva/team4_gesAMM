@@ -150,12 +150,17 @@ namespace Mama
 
             while (reader.Read())
             {
-                lesEtapes.Add(new Etape(
-                    int.Parse(reader["ETP_num"].ToString().TrimEnd()),
-                    reader["ETP_libelle"].ToString().TrimEnd(),
-                    reader["ETP_norme"].ToString().TrimEnd(),
-                    string.IsNullOrEmpty(reader["ETP_dateNorme"].ToString()) ? DateTime.MinValue : DateTime.Parse(reader["ETP_dateNorme"].ToString())
-                    ));
+                int num = Int32.Parse(reader["ETP_num"].ToString().TrimEnd());
+                string libelle = reader["ETP_libelle"].ToString().TrimEnd();
+
+                if (DateTime.TryParse(reader["ETP_dateNorme"].ToString(), out DateTime date))
+                 // normée
+                    lesEtapes.Add(new Etape(num, libelle));
+                else {// pas normée
+                    string norme = reader["ETP_norme"].ToString().TrimEnd();
+                    lesEtapes.Add(new EtapeNormee(num, libelle, norme, date));
+                }
+                
             }
             reader.Close();
 
