@@ -30,8 +30,8 @@ namespace Mama
         private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
         {
             Medicament medoc = Globale.Medicaments[cbMedocs.SelectedItem.ToString()];
-
-            if(medoc.getDerniereEtape())
+            /*
+            if(medoc.getDerniereEtape())*/
         }
     }
 }
