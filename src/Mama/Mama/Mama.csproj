@@ -94,24 +94,6 @@
     <Compile Include="I_Saisie_Form.Designer.cs">
       <DependentUpon>I_Saisie_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="I_Ajout_Form.Designer.cs">
-      <DependentUpon>I_Ajout_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="I_Maj_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="I_Maj_Form.Designer.cs">
-      <DependentUpon>I_Maj_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="I_Saisie_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="I_Saisie_Form.Designer.cs">
-      <DependentUpon>I_Saisie_Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,9 +111,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="I_Ajout_Form.resx">
       <DependentUpon>I_Ajout_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
