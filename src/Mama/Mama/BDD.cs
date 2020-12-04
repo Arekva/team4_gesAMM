@@ -191,8 +191,17 @@ namespace Mama
 
             while (reader.Read())
             {
+                Etape lEtape;
+                foreach (Etape e in Globale.Etapes.Values)
+                    if (e.getNumero() == int.Parse(reader["SUB_numEtape"].ToString()))
+                    {
+                        lEtape = e;
+                        break;
+                    }
+
                 /*lesSubirs.Add(new Subir(
                     DateTime.Parse(reader["SUB_dateDecisions"].ToString()),
+                    Globale.Etapes,
 
                     ));*/
             }
