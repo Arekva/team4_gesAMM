@@ -105,12 +105,12 @@ namespace Mama
             {
                 // récupérer toutes les familles une par une.
                 familles.Add(new Famille(
-                    reader["FAM_code"].ToString(),
-                    reader["FAM_libelle"].ToString(),
-                    int.Parse(reader["FAM_nbMediAmm"].ToString())
+                    reader["FAM_code"].ToString().TrimEnd(),
+                    reader["FAM_libelle"].ToString().TrimEnd(),
+                    int.Parse(reader["FAM_nbMediAmm"].ToString().TrimEnd())
                 ));
             }
-
+            reader.Close();
 
             return familles.AsReadOnly();
         }
@@ -127,17 +127,16 @@ namespace Mama
 
 
                 lesMedicaments.Add(new Medicament(
-                    reader["MED_depotLegal"].ToString(),
-                    reader["MED_nomCommercial"].ToString(),
-                    reader["MED_composition"].ToString(),
-                    reader["MED_effets"].ToString(),
-                    reader["MED_contreIndications"].ToString(),
-                    Globale.Familles[reader["MED_codeFamille"].ToString()]
-
-
-
+                    reader["MED_depotLegal"].ToString().TrimEnd(),
+                    reader["MED_nomCommercial"].ToString().TrimEnd(),
+                    reader["MED_composition"].ToString().TrimEnd(),
+                    reader["MED_effets"].ToString().TrimEnd(),
+                    reader["MED_contreIndications"].ToString().TrimEnd(),
+                    Globale.Familles[reader["MED_codeFamille"].ToString().TrimEnd()]
                 ));
             }
+
+            reader.Close();
 
 
             return lesMedicaments;
@@ -152,12 +151,13 @@ namespace Mama
             while (reader.Read())
             {
                 lesEtapes.Add(new Etape(
-                    int.Parse(reader["ETP_num"].ToString()),
-                    reader["ETP_libelle"].ToString(),
-                    reader["ETP_norme"].ToString(),
+                    int.Parse(reader["ETP_num"].ToString().TrimEnd()),
+                    reader["ETP_libelle"].ToString().TrimEnd(),
+                    reader["ETP_norme"].ToString().TrimEnd(),
                     string.IsNullOrEmpty(reader["ETP_dateNorme"].ToString()) ? DateTime.MinValue : DateTime.Parse(reader["ETP_dateNorme"].ToString())
                     ));
             }
+            reader.Close();
 
             return lesEtapes;
         }
@@ -173,15 +173,33 @@ namespace Mama
             {
                 // récupérer toutes les familles une par une.
                 lesDecisions.Add(new Decision(
-                    int.Parse(reader["DCS_id"].ToString()),
-                    reader["DCS_libelle"].ToString()
+                    int.Parse(reader["DCS_id"].ToString().TrimEnd()),
+                    reader["DCS_libelle"].ToString().TrimEnd()
                 ));
             }
+            reader.Close();
 
 
             return lesDecisions;
         }
-        
 
+        public static List<Subir> tousSubir()
+        {
+            List<Subir> lesSubirs = new List<Subir>();
+
+            SqlDataReader reader = BDD.LireProcedure("prc_toutes_decisions");
+
+            while (reader.Read())
+            {
+                /*lesSubirs.Add(new Subir(
+                    DateTime.Parse(reader["SUB_dateDecisions"].ToString()),
+
+                    ));*/
+            }
+            reader.Close();
+
+
+            return lesSubirs;
+        }
     }
 }

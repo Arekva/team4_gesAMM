@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.cbMedocs = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // cbMedocs
+            // 
+            this.cbMedocs.FormattingEnabled = true;
+            this.cbMedocs.Location = new System.Drawing.Point(35, 45);
+            this.cbMedocs.Name = "cbMedocs";
+            this.cbMedocs.Size = new System.Drawing.Size(121, 21);
+            this.cbMedocs.TabIndex = 0;
+            // 
+            // I_Saisie_Form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbMedocs);
+            this.Name = "I_Saisie_Form";
             this.Text = "I_Saisie_Form";
+            this.Load += new System.EventHandler(this.I_Saisie_Form_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cbMedocs;
     }
 }

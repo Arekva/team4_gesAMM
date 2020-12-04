@@ -16,5 +16,22 @@ namespace Mama
         {
             InitializeComponent();
         }
+
+        private void I_Saisie_Form_Load(object sender, EventArgs e)
+        {
+            foreach(var kvp in Globale.Medicaments)
+            {
+                cbMedocs.Items.Add(kvp.Value.getNomCommercial());
+            }
+
+            cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
+        }
+
+        private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Medicament medoc = Globale.Medicaments[cbMedocs.SelectedItem.ToString()];
+
+            if(medoc.getDerniereEtape())
+        }
     }
 }
