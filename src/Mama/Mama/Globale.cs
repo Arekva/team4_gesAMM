@@ -17,7 +17,7 @@ namespace Mama
 
         public static Dictionary<string, Etape> Etapes = new Dictionary<string, Etape>();
 
-        public static Dictionary<string, Decision> Decisions = new Dictionary<string, Decision>();
+        public static Dictionary<int, Decision> Decisions = new Dictionary<int, Decision>();
 
         // le constructeur statique s'éxécute dès que quelque chose accède à cette classe.
         static Globale()
@@ -32,11 +32,11 @@ namespace Mama
             {
                 Medicaments.Add(leMedo.getDepotLegal(), leMedo);
             }
-            /* rajouter aprés la procédure tous les medicaments
+            
             foreach(Decision laDescision in BDD.toutesLesDecision())
             {
-                Etapes.Add(laDescision.getID(), laDescision);
-            }*/
+                Decisions.Add(laDescision.getID(), laDescision);
+            }
         }
     }
 }

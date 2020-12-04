@@ -142,8 +142,8 @@ namespace Mama
 
             return lesMedicaments;
         }
-        // FAUT RAJOUTER QUAND ON AURA CREER LA PROCEDURE TOUTE DECISION
-        /*
+     
+        
         public static List<Decision> toutesLesDecision()
         {
             List<Decision> lesDecisions = new List<Decision>();
@@ -162,7 +162,7 @@ namespace Mama
 
             return lesDecisions;
         }
-        */
+        
 
     }
 }
