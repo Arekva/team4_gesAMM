@@ -34,7 +34,9 @@ namespace Mama
         private void btConnect_Click(object sender, EventArgs e)
         {
             Main_Form laForm = new Main_Form();
-            laForm.Show();
+            this.Hide();//On cache pour réafficher la form en cas de deconnection
+            laForm.ShowDialog();
+            
         }
     }
 }
