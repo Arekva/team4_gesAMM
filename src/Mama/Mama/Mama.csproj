@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Decision.cs" />
     <Compile Include="Etape.cs" />
+    <Compile Include="EtapeNormee.cs" />
     <Compile Include="Famille.cs" />
     <Compile Include="Frm_connexion.cs">
       <SubType>Form</SubType>
