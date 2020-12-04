@@ -115,6 +115,54 @@ namespace Mama
             return familles.AsReadOnly();
         }
 
+        public static List<Medicament> tousLesMedicaments()
+        {
+            List<Medicament> lesMedicaments = new List<Medicament>();
+
+            SqlDataReader reader = BDD.LireProcedure("prc_tous_medicaments");
+
+            while (reader.Read())
+            {
+                // récupérer toutes les familles une par une.
+
+
+                lesMedicaments.Add(new Medicament(
+                    reader["MED_depotLegal"].ToString(),
+                    reader["MED_nomCommercial"].ToString(),
+                    reader["MED_composition"].ToString(),
+                    reader["MED_effets"].ToString(),
+                    reader["MED_contreIndications"].ToString(),
+                    Globale.Familles[reader["MED_codeFamille"].ToString()]
+
+
+
+                ));
+            }
+
+
+            return lesMedicaments;
+        }
+        // FAUT RAJOUTER QUAND ON AURA CREER LA PROCEDURE TOUTE DECISION
+        /*
+        public static List<Decision> toutesLesDecision()
+        {
+            List<Decision> lesDecisions = new List<Decision>();
+
+            SqlDataReader reader = BDD.LireProcedure("prc_toutes_decisions");
+
+            while (reader.Read())
+            {
+                // récupérer toutes les familles une par une.
+                lesDecisions.Add(new Decision(
+                    int.Parse(reader["DCS_id"].ToString()),
+                    reader["DCS_libelle"].ToString()
+                ));
+            }
+
+
+            return lesDecisions;
+        }
+        */
 
     }
 }

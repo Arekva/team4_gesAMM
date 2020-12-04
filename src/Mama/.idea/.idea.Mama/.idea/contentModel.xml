@@ -8,6 +8,7 @@
         <e p="App.config" t="Include" />
         <e p="BDD.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Decision.cs" t="Include" />
         <e p="Etape.cs" t="Include" />
         <e p="Famille.cs" t="Include" />
         <e p="Frm_connexion.cs" t="Include" />
