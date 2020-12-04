@@ -67,12 +67,14 @@
             this.workflowDesÉtapesDunMédicamentToolStripMenuItem.Name = "workflowDesÉtapesDunMédicamentToolStripMenuItem";
             this.workflowDesÉtapesDunMédicamentToolStripMenuItem.Size = new System.Drawing.Size(400, 26);
             this.workflowDesÉtapesDunMédicamentToolStripMenuItem.Text = "Workflow des étapes d\'un médicament";
+            this.workflowDesÉtapesDunMédicamentToolStripMenuItem.Click += new System.EventHandler(this.workflowDesÉtapesDunMédicamentToolStripMenuItem_Click);
             // 
             // nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem
             // 
             this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem.Name = "nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem";
             this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem.Size = new System.Drawing.Size(400, 26);
             this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem.Text = "Nombre de médicaments autorisés par famille";
+            this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem.Click += new System.EventHandler(this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem_Click);
             // 
             // médicamentsEnCoursDeValidationToolStripMenuItem
             // 

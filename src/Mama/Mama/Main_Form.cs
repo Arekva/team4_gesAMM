@@ -17,12 +17,7 @@ namespace Mama
             InitializeComponent();
         }
 
-        private void médicamentsEnCoursDeValidationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            C_MedicamentsEnCours_Form laForm = new C_MedicamentsEnCours_Form;
-            laForm.MdiParent = this;
-            laForm.Show();
-        }
+
 
         private void ajoutDunNouveauMédicamentToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -41,6 +36,27 @@ namespace Mama
         private void saisieDeLaDécisionDuneÉtapeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             I_Saisie_Form laForm = new I_Saisie_Form();
+            laForm.MdiParent = this;
+            laForm.Show();
+        }
+
+        private void workflowDesÉtapesDunMédicamentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            C_Workflow_Form laForm = new C_Workflow_Form();
+            laForm.MdiParent = this;
+            laForm.Show();
+        }
+
+        private void nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            C_NombreMedicaments_Form laForm = new C_NombreMedicaments_Form();
+            laForm.MdiParent = this;
+            laForm.Show();
+        }        
+        
+        private void médicamentsEnCoursDeValidationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            C_MedicamentsEnCours_Form laForm = new C_MedicamentsEnCours_Form();
             laForm.MdiParent = this;
             laForm.Show();
         }
