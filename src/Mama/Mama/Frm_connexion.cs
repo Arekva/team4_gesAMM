@@ -35,9 +35,9 @@ namespace Mama
 
 
             //test
-            foreach(string laClef in Globale.Medicaments.Keys)
+            foreach (int laClef in Globale.Decisions.Keys)
             {
-                lbTest.Items.Add(Globale.Medicaments[laClef].getDepotLegal());
+                lbTest.Items.Add(Globale.Decisions[laClef].getLibelle());
             }
             
 
