@@ -15,6 +15,9 @@ namespace Mama
         public Main_Form()
         {
             InitializeComponent();
+            int WScreen = Screen.PrimaryScreen.Bounds.Width;
+            int HScreen = Screen.PrimaryScreen.Bounds.Height;
+            this.Size = new Size(WScreen,HScreen);
         }
 
 
