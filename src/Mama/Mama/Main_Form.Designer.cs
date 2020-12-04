@@ -96,12 +96,14 @@
             this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem.Name = "saisieDeLaDécisionDuneÉtapeToolStripMenuItem";
             this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
             this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem.Text = "Saisie de la décision d\'une étape ";
+            this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem.Click += new System.EventHandler(this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem_Click);
             // 
             // miseÀJourDesÉtapesNorméesToolStripMenuItem
             // 
             this.miseÀJourDesÉtapesNorméesToolStripMenuItem.Name = "miseÀJourDesÉtapesNorméesToolStripMenuItem";
             this.miseÀJourDesÉtapesNorméesToolStripMenuItem.Size = new System.Drawing.Size(312, 26);
             this.miseÀJourDesÉtapesNorméesToolStripMenuItem.Text = "Mise à jour des étapes normées";
+            this.miseÀJourDesÉtapesNorméesToolStripMenuItem.Click += new System.EventHandler(this.miseÀJourDesÉtapesNorméesToolStripMenuItem_Click);
             // 
             // ajoutDunNouveauMédicamentToolStripMenuItem
             // 

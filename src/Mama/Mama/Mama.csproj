@@ -112,6 +112,9 @@
     <EmbeddedResource Include="I_Ajout_Form.resx">
       <DependentUpon>I_Ajout_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

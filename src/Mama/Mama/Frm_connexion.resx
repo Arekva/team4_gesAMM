@@ -154,7 +154,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbLogin.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="tbLogin.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -187,7 +187,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbLogin.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="tbPassword.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -217,7 +217,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbPassword.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="lbPassword.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -256,7 +256,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbPassword.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="btConnect.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -289,7 +289,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btConnect.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="pbLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -576,30 +576,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbTest.ItemHeight" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="lbTest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 131</value>
-  </data>
-  <data name="lbTest.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 260</value>
-  </data>
-  <data name="lbTest.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lbTest.Name" xml:space="preserve">
-    <value>lbTest</value>
-  </data>
-  <data name="&gt;&gt;lbTest.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbTest.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbTest.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
