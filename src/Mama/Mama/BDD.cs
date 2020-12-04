@@ -142,8 +142,27 @@ namespace Mama
 
             return lesMedicaments;
         }
-     
-        
+
+        public static List<Etape> toutesLesEtapes()
+        {
+            List<Etape> lesEtapes = new List<Etape>();
+
+            SqlDataReader reader = BDD.LireProcedure("prc_toutes_etapes");
+
+            while (reader.Read())
+            {
+                lesEtapes.Add(new Etape(
+                    int.Parse(reader["ETP_num"].ToString()),
+                    reader["ETP_libelle"].ToString(),
+                    reader["ETP_norme"].ToString(),
+                    string.IsNullOrEmpty(reader["ETP_dateNorme"].ToString()) ? DateTime.MinValue : DateTime.Parse(reader["ETP_dateNorme"].ToString())
+                    ));
+            }
+
+            return lesEtapes;
+        }
+
+
         public static List<Decision> toutesLesDecision()
         {
             List<Decision> lesDecisions = new List<Decision>();

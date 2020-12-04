@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Mama
 {
@@ -14,7 +15,6 @@ namespace Mama
         /// </summary>
         public static Dictionary<string, Famille> Familles { get; } = new Dictionary<string, Famille>();
         public static Dictionary<string, Medicament> Medicaments  = new Dictionary<string, Medicament>(); 
-
         public static Dictionary<string, Etape> Etapes = new Dictionary<string, Etape>();
 
         public static Dictionary<int, Decision> Decisions = new Dictionary<int, Decision>();
@@ -32,11 +32,17 @@ namespace Mama
             {
                 Medicaments.Add(leMedo.getDepotLegal(), leMedo);
             }
-            
+
+
+            foreach(Etape lEtape in BDD.toutesLesEtapes())
+            {
+                Etapes.Add(lEtape.getLibelle(), lEtape);
+            }
             foreach(Decision laDescision in BDD.toutesLesDecision())
             {
                 Decisions.Add(laDescision.getID(), laDescision);
             }
+
         }
     }
 }
