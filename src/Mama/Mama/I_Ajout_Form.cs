@@ -16,5 +16,13 @@ namespace Mama
         {
             InitializeComponent();
         }
+
+        private void I_Ajout_Form_Load(object sender, EventArgs e)
+        {
+            foreach (string laClef in Globale.Familles.Keys)
+            {
+                cbFamille.Items.Add(Globale.Familles[laClef].getLibelle());
+            }
+        }
     }
 }

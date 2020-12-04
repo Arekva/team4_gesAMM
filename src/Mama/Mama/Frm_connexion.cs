@@ -32,14 +32,6 @@ namespace Mama
 
 
 
-
-
-            //test
-            /*
-            foreach (int laClef in Globale.Decisions.Keys)
-            {
-                lbTest.Items.Add(Globale.Decisions[laClef].getLibelle());
-            }*/
             
 
         }

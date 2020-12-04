@@ -75,7 +75,26 @@
       <DependentUpon>Frm_connexion.cs</DependentUpon>
     </Compile>
     <Compile Include="Globale.cs" />
+    <Compile Include="Historique.cs" />
     <Compile Include="I_Ajout_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="I_Ajout_Form.Designer.cs">
+      <DependentUpon>I_Ajout_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="I_Maj_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="I_Maj_Form.Designer.cs">
+      <DependentUpon>I_Maj_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="I_Saisie_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="I_Saisie_Form.Designer.cs">
+      <DependentUpon>I_Saisie_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="I_Ajout_Form.Designer.cs">
@@ -108,8 +127,11 @@
     <EmbeddedResource Include="Frm_connexion.resx">
       <DependentUpon>Frm_connexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form.resx">
-      <DependentUpon>Main_Form.cs</DependentUpon>
+    <EmbeddedResource Include="I_Ajout_Form.resx">
+      <DependentUpon>I_Ajout_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
