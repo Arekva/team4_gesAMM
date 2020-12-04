@@ -36,7 +36,6 @@ namespace Mama
 
             foreach(Etape lEtape in BDD.toutesLesEtapes())
             {
-                MessageBox.Show(lEtape.getDate().ToShortDateString());
                 Etapes.Add(lEtape.getLibelle(), lEtape);
             }
             foreach(Decision laDescision in BDD.toutesLesDecision())
