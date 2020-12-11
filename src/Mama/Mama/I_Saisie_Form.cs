@@ -30,19 +30,11 @@ namespace Mama
             }
 
             cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
-
-
-            test();
+            btValider.Enabled = false;
+            btRefuser.Enabled = false;
 
         }
-        private void test()
-        {
-            lbTest.Items.Clear();
-            foreach (Subir leSubir in Globale.Workflow)
-            {
-                lbTest.Items.Add(leSubir.getCodeDepot());
-            }
-        }
+
         private void RemplirEtapeFinis(Medicament medoc)
         {
             foreach (Subir letape in medoc.getLeWorkflow())
@@ -95,20 +87,31 @@ namespace Mama
             if (medoc.getDerniereEtape() == null)
             {
                 mettreEtapeEnCours(medoc);
+                btValider.Enabled = true;
+                btRefuser.Enabled = true;
 
             }
             else if (medoc.getLeWorkflow()[medoc.getLeWorkflow().Count - 1].getidDecision() == 2)
             {
                 MessageBox.Show("La dernière étape du médicament est refusée. Aucune autre étape ne peut être ajoutée.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 RemplirEtapeFinis(medoc);
-
+                btValider.Enabled = false;
+                btRefuser.Enabled = false;
 
             }
             else
             {
                 RemplirEtapeFinis(medoc);
+                if (medoc.getLeWorkflow().Count != 8) { 
                 mettreEtapeEnCours(medoc);
-
+                btValider.Enabled = true;
+                btRefuser.Enabled = true;
+                                                         }
+                else
+                {
+                    btValider.Enabled = false;
+                    btRefuser.Enabled = false;
+                }
             }
         }
         private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,19 +121,40 @@ namespace Mama
 
         private void btValider_Click(object sender, EventArgs e)
         {
+            AccepterOuRefuser(1);
+
+        }
+
+        private void AccepterOuRefuser(int idDecision)
+        {
             Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];
 
-                Subir NewSubission = new Subir(dtpDate.Value, Globale.Etapes[medoc.getLeWorkflow().Count + 1], 1, medoc.getDepotLegal());
-                Globale.Workflow.Add(NewSubission);
-                medocs[cbMedocs.SelectedItem.ToString()].addToWorkflow(NewSubission);
 
+            Subir NewSubission = new Subir(dtpDate.Value, Globale.Etapes[medoc.getLeWorkflow().Count + 1], idDecision, medoc.getDepotLegal());
+            Globale.Workflow.Add(NewSubission);
+            medocs[cbMedocs.SelectedItem.ToString()].addToWorkflow(NewSubission);
 
-                Globale.Medicaments[medoc.getDepotLegal()].setDerniereEtape(NewSubission.getEtape().getNumero());
-                test();
-                updateListView();
+            BDD.LireProcedure("prc_newWorkflow", new Parametre("@dateDeci", dtpDate.Value, 50),
+                new Parametre("@numEtape", NewSubission.getEtape().getNumero(), 50),
+                new Parametre("@idDeci", NewSubission.getidDecision(), 50),
+                new Parametre("@depotLegal", NewSubission.getCodeDepot(), 250));
 
+            Globale.Medicaments[medoc.getDepotLegal()].setDerniereEtape(NewSubission.getEtape().getNumero());
+            updateListView();
+            if (idDecision == 1 && medocs[cbMedocs.SelectedItem.ToString()].getLeWorkflow().Count == 8)
+            {
+                Random r = new Random();
+                BDD.LireProcedure("prc_setAMM", new Parametre("@amm",r.Next(0,9999999), 50),
+               new Parametre("@depot", NewSubission.getCodeDepot(), 50));
+            }
+            BDD.LireProcedure("prc_setLastEtape", new Parametre("@depot", NewSubission.getCodeDepot(), 50),
+               new Parametre("@etape", NewSubission.getEtape().getNumero(), 10));
 
+        }
 
+        private void btRefuser_Click(object sender, EventArgs e)
+        {
+            AccepterOuRefuser(2);
         }
     }
 }

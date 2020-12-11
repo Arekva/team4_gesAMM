@@ -35,8 +35,8 @@
             this.libellé = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.normes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateNorme = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.btValider = new System.Windows.Forms.Button();
             this.btRefuser = new System.Windows.Forms.Button();
@@ -94,6 +94,10 @@
             this.DateNorme.Text = "Date de la norme";
             this.DateNorme.Width = 106;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Decision";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -102,10 +106,6 @@
             this.label1.Size = new System.Drawing.Size(151, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Veuillez choisir un médicament";
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Decision";
             // 
             // dtpDate
             // 
@@ -132,6 +132,7 @@
             this.btRefuser.TabIndex = 5;
             this.btRefuser.Text = "Refuser";
             this.btRefuser.UseVisualStyleBackColor = true;
+            this.btRefuser.Click += new System.EventHandler(this.btRefuser_Click);
             // 
             // aaa
             // 
