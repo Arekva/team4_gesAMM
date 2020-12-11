@@ -45,16 +45,20 @@ namespace Mama
 
         private void btChercherMedicament_Click(object sender, EventArgs e)
         {
-            lvLesMedicaments.Items.Clear();
-            foreach(string laClef in Globale.Medicaments.Keys)
+            if (tbFamilleSelection.Text == "Aucune") MessageBox.Show("Veuillez selectionner une famille");
+            else
             {
-                if(Globale.Medicaments[laClef].getFamille().getCode() == codeFamille && Globale.Medicaments[laClef].getAMM() != "Aucune")
+                lvLesMedicaments.Items.Clear();
+                foreach (string laClef in Globale.Medicaments.Keys)
                 {
-                    ListViewItem lvi = new ListViewItem();
+                    if (Globale.Medicaments[laClef].getFamille().getCode() == codeFamille && Globale.Medicaments[laClef].getAMM() != "")
+                    {
+                        ListViewItem lvi = new ListViewItem();
 
-                    lvi.Text = Globale.Medicaments[laClef].getNomCommercial();
+                        lvi.Text = Globale.Medicaments[laClef].getNomCommercial();
 
-                    lvLesMedicaments.Items.Add(lvi);
+                        lvLesMedicaments.Items.Add(lvi);
+                    }
                 }
             }
         }
