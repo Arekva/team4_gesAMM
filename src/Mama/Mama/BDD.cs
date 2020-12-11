@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace Mama
 {
@@ -132,26 +133,13 @@ namespace Mama
                     reader["MED_contreIndications"].ToString().TrimEnd(),
                     Globale.Familles[reader["MED_codeFamille"].ToString().TrimEnd()]
                 );
-
-
                 
-
-                if (reader["MEDderniereEtape"] != null)
+                
+                if (reader["MEDderniereEtape"].ToString() != "")
                 {
-                    int i = 0;
-                    bool trouv = false;
-                    while (trouv == false && i < Globale.Workflow.Count)
-                    {
-                        if (Globale.Workflow[i].getCodeDepot() == leTurboMedoc.getDepotLegal() && reader["MEDderniereEtape"] == Globale.Workflow[i].getEtape())
-                        {
-                            trouv = true;
-                            leTurboMedoc.setDerniereEtape(Globale.Workflow[i]);
-                        }
-                        else { i++; }
-                    }
-
-                   
+                    leTurboMedoc.setDerniereEtape(int.Parse(reader["MEDderniereEtape"].ToString()));
                 }
+                
                 lesMedicaments.Add(leTurboMedoc);
             }
 

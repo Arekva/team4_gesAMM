@@ -52,6 +52,17 @@ namespace Mama
             foreach(Subir letape in BDD.tousSubir())
             {
                 Workflow.Add(letape);
+                int i = 0;
+                bool trouv = false;
+                while (trouv == false && i < Globale.Medicaments.Count())
+                {
+                    if (letape.getCodeDepot() == Globale.Medicaments.ElementAt(i).Value.getDepotLegal())
+                    {
+                        Globale.Medicaments.ElementAt(i).Value.addToWorkflow(letape);
+                        trouv = true;
+                    }
+                    else { i++; }
+                }
             }
             
         }

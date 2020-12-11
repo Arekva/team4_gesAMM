@@ -43,55 +43,93 @@ namespace Mama
                 lbTest.Items.Add(leSubir.getCodeDepot());
             }
         }
-
-        private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
+        private void RemplirEtapeFinis(Medicament medoc)
         {
-            Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];//Globale.Medicaments[cbMedocs.SelectedItem.ToString()];
-            lvWorkFlow.Items.Clear();
-            //MessageBox.Show(medoc.getDerniereEtape().ToString());
-
-            if (medoc.getDerniereEtape() == null)
+            foreach (Subir letape in medoc.getLeWorkflow())
             {
                 ListViewItem aa = new ListViewItem();
 
-                aa.Text = Globale.Etapes[1].getNumero().ToString();
-                aa.SubItems.Add("En cours");
-                aa.SubItems.Add(Globale.Etapes[1].getLibelle());
-                aa.SubItems.Add("Aucune");
-                aa.SubItems.Add("Aucune");
-                aa.SubItems.Add("En cours");
+                aa.Text = letape.getEtape().getNumero().ToString();
+                aa.SubItems.Add(letape.getDateDecision().ToString());
+                aa.SubItems.Add(letape.getEtape().getLibelle());
+                if (letape.getEtape().GetType().ToString() == "EtapeNormee")
+                {
+                    aa.SubItems.Add((letape.getEtape() as EtapeNormee).getNorme());
+                    aa.SubItems.Add((letape.getEtape() as EtapeNormee).getDate().ToString());
+                }
+                else
+                {
+                    aa.SubItems.Add("Aucune");
+                    aa.SubItems.Add("Aucune");
+                }
+                if (letape.getidDecision() == 1)
+                {
+                    aa.SubItems.Add("Validé");
+                }
+                else { aa.SubItems.Add("Refusé"); }
+
 
                 lvWorkFlow.Items.Add(aa);
             }
-            else if  (Globale.Decisions[medoc.getDerniereEtape().getidDecision()].getID() == 2)
+        }
+        private void mettreEtapeEnCours(Medicament medoc)
+        {
+            ListViewItem aa = new ListViewItem();
+
+            aa.Text = Globale.Etapes[medoc.getLeWorkflow().Count + 1].getNumero().ToString();
+            aa.SubItems.Add("En cours");
+            aa.SubItems.Add(Globale.Etapes[medoc.getLeWorkflow().Count + 1].getLibelle());
+            aa.SubItems.Add("Aucune");
+            aa.SubItems.Add("Aucune");
+            aa.SubItems.Add("En cours");
+
+            lvWorkFlow.Items.Add(aa);
+        }
+
+        private void updateListView()
+        {
+            Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];//Globale.Medicaments[cbMedocs.SelectedItem.ToString()];
+            lvWorkFlow.Items.Clear();
+
+
+            if (medoc.getDerniereEtape() == null)
+            {
+                mettreEtapeEnCours(medoc);
+
+            }
+            else if (medoc.getLeWorkflow()[medoc.getLeWorkflow().Count - 1].getidDecision() == 2)
             {
                 MessageBox.Show("La dernière étape du médicament est refusée. Aucune autre étape ne peut être ajoutée.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                RemplirEtapeFinis(medoc);
+
+
             }
             else
             {
-                
-                
-
-
-
+                RemplirEtapeFinis(medoc);
+                mettreEtapeEnCours(medoc);
 
             }
-
-
-
+        }
+        private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateListView();
         }
 
         private void btValider_Click(object sender, EventArgs e)
         {
             Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];
-            if (medoc.getDerniereEtape() == null)
-            {
-                Subir NewSubission = new Subir(dtpDate.Value, Globale.Etapes[1], 1, medoc.getDepotLegal());
+
+                Subir NewSubission = new Subir(dtpDate.Value, Globale.Etapes[medoc.getLeWorkflow().Count + 1], 1, medoc.getDepotLegal());
                 Globale.Workflow.Add(NewSubission);
-                
-                Globale.Medicaments[medoc.getDepotLegal()].setDerniereEtape(NewSubission);
+                medocs[cbMedocs.SelectedItem.ToString()].addToWorkflow(NewSubission);
+
+
+                Globale.Medicaments[medoc.getDepotLegal()].setDerniereEtape(NewSubission.getEtape().getNumero());
                 test();
-            }
+                updateListView();
+
+
 
         }
     }

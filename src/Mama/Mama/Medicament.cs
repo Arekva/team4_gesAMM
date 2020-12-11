@@ -21,7 +21,7 @@ namespace Mama
         private string AMM; //code de l'autorisation de la mise en marché est null si le medoc n'est pas autoriser
                             //NULL A SA CREATION
         private List<Subir> leWorkFlow; // il s'agit de la liste de toutes les étapes de verification nécessaire
-        private Subir DerniereEtape; //il s'agit de la derniere étape de test effectuer 
+        private int? DerniereEtape; //il s'agit de la derniere étape de test effectuer --> initialiser a null
 
         private Famille laFamille; // la famille du medicament
 
@@ -46,7 +46,6 @@ namespace Mama
             this.laFamille = laaFamille;
             this.AMM = null;
             this.DerniereEtape = null;
-            //this.DerniereEtape = laDerniereEtape;
             this.leWorkFlow = new List<Subir>();
         }
 
@@ -59,8 +58,9 @@ namespace Mama
         public string getComposition() { return this.composition; }
         public string getContreIndication() { return this.contreIndication; }
         public string getAMM() { return this.AMM; }
-        public Subir getDerniereEtape() { return this.DerniereEtape; }
+        public int? getDerniereEtape() { return this.DerniereEtape; }
         public Famille getFamille() { return this.laFamille; }
+        public List<Subir> getLeWorkflow() { return this.leWorkFlow; }
 
         /// <summary>
         /// Permet d'attribuer le code du dépot légal au médicament
@@ -71,9 +71,13 @@ namespace Mama
         public void setComposition(string laCompo) { this.composition= laCompo; }
         public void setContreIndication(string lindication) { this.contreIndication = lindication; }
         public void setAMM(string laAMM) { this.AMM = laAMM; }
-        public void setDerniereEtape(Subir lEtape) { this.DerniereEtape = lEtape; }
+        public void setDerniereEtape(int lEtape) { this.DerniereEtape = lEtape; }
         public void setFamille(Famille laNewFamille) { this.laFamille = laNewFamille; }
 
+        public void addToWorkflow(Subir leNewSubir)
+        {
+            this.leWorkFlow.Add(leNewSubir);
+        }
 
 
     }
