@@ -16,7 +16,7 @@ namespace Mama
         public static Dictionary<string, Famille> Familles { get; } = new Dictionary<string, Famille>();
         public static Dictionary<string, Medicament> Medicaments  = new Dictionary<string, Medicament>(); 
         public static Dictionary<string, Etape> Etapes = new Dictionary<string, Etape>();
-
+        public static Dictionary<int, Utilisateur> Utilisateurs = new Dictionary<int, Utilisateur>();
         public static Dictionary<int, Decision> Decisions = new Dictionary<int, Decision>();
 
         // le constructeur statique s'éxécute dès que quelque chose accède à cette classe.
@@ -41,6 +41,11 @@ namespace Mama
             foreach(Decision laDescision in BDD.toutesLesDecision())
             {
                 Decisions.Add(laDescision.getID(), laDescision);
+            }
+
+            foreach(Utilisateur lUtilisateur in BDD.TousLesUtilisateurs())
+            {
+                Utilisateurs.Add(lUtilisateur.getId(), lUtilisateur);
             }
 
         }

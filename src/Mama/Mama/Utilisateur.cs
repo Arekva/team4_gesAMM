@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mama
 {
-    class Utilisateur
+    public class Utilisateur
     {
         private int id;
         private string login;

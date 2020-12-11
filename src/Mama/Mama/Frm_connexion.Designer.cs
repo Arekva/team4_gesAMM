@@ -55,7 +55,6 @@
             // 
             resources.ApplyResources(this.tbPassword, "tbPassword");
             this.tbPassword.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.UseSystemPasswordChar = true;
             // 

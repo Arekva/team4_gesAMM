@@ -199,7 +199,7 @@
     <value>802, 406</value>
   </data>
   <data name="tbPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>304, 27</value>
+    <value>304, 34</value>
   </data>
   <data name="tbPassword.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>

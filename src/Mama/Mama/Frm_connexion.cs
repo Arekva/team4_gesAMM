@@ -33,9 +33,24 @@ namespace Mama
 
         private void btConnect_Click(object sender, EventArgs e)
         {
-            Main_Form laForm = new Main_Form();
-            this.Hide();//On cache pour réafficher la form en cas de deconnection
-            laForm.ShowDialog();
+            bool trouve = false;
+            int i = 0;
+            while (!trouve && i < Globale.Utilisateurs.Count())
+            {
+                if(Globale.Utilisateurs.ElementAt(i).Value.getLogin() == tbLogin.Text && Globale.Utilisateurs.ElementAt(i).Value.getMdp() == tbPassword.Text)
+                {
+                    trouve = true;
+                    Main_Form laForm = new Main_Form();
+                    this.Hide();//On cache pour réafficher la form en cas de deconnection
+                    laForm.ShowDialog();
+                }
+                i++;
+            }
+            if (!trouve)
+            {
+                MessageBox.Show("Identifiant ou mot de passe incorrect !");
+            }
+            
             
         }
     }

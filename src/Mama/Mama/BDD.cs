@@ -215,5 +215,23 @@ namespace Mama
 
             return lesSubirs;
         }
+
+        public static List<Utilisateur> TousLesUtilisateurs()
+        {
+            List<Utilisateur> lesUsers = new List<Utilisateur>();
+
+            SqlDataReader reader = BDD.LireProcedure("prc_tout_utilisateurs");
+
+            while (reader.Read())
+            {
+                // récupérer tout les utilisateurs
+                lesUsers.Add(new Utilisateur(int.Parse(reader["id"].ToString().TrimEnd()), reader["login"].ToString().TrimEnd(), reader["mdp"].ToString().TrimEnd()));
+            }
+            reader.Close();
+
+
+            return lesUsers;
+        }
+
     }
 }
