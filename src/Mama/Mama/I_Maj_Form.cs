@@ -41,7 +41,8 @@ namespace Mama
         private void lvEtape_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             selectedIdx = int.Parse(lvEtape.FocusedItem.Text);
-            tbDateNorme.Text = 
+            tbDateNorme.Text = (Globale.Etapes[selectedIdx] as EtapeNormee).getDate().ToString();
+            tbNorme.Text = (Globale.Etapes[selectedIdx] as EtapeNormee).getNorme();
         }
     }
 }
