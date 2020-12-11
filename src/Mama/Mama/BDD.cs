@@ -196,17 +196,8 @@ namespace Mama
 
             while (reader.Read())
             {
-             
-
-                //lesSubirs.Add(new Subir(DateTime.Parse(reader["SUB_dateDecisions"].ToString()), Globale.Etapes[int.Parse(reader["SUB_numEtape"])]
-                    
-
-
-
-
-
-
-                    ));
+                lesSubirs.Add(new Subir(DateTime.Parse(reader["SUB_dateDecisions"].ToString()), Globale.Etapes[int.Parse(reader["SUB_numEtape"].ToString().TrimEnd())],
+                    int.Parse(reader["SUB_idDecision"].ToString().TrimEnd()), reader["SUB_codeDepotLegal"].ToString().TrimEnd()));                 
             }
             reader.Close();
 
