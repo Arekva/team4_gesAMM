@@ -18,6 +18,7 @@ namespace Mama
         public static Dictionary<int, Etape> Etapes = new Dictionary<int, Etape>();
         public static Dictionary<int, Utilisateur> Utilisateurs = new Dictionary<int, Utilisateur>();
         public static Dictionary<int, Decision> Decisions = new Dictionary<int, Decision>();
+        public static List<Subir> Workflow = new List<Subir>();
 
         // le constructeur statique s'éxécute dès que quelque chose accède à cette classe.
         static Globale()
