@@ -124,16 +124,35 @@ namespace Mama
             while (reader.Read())
             {
                 // récupérer toutes les familles une par une.
-
-
-                lesMedicaments.Add(new Medicament(
+                Medicament leTurboMedoc = new Medicament(
                     reader["MED_depotLegal"].ToString().TrimEnd(),
                     reader["MED_nomCommercial"].ToString().TrimEnd(),
                     reader["MED_composition"].ToString().TrimEnd(),
                     reader["MED_effets"].ToString().TrimEnd(),
                     reader["MED_contreIndications"].ToString().TrimEnd(),
                     Globale.Familles[reader["MED_codeFamille"].ToString().TrimEnd()]
-                ));
+                );
+
+
+                
+
+                if (reader["MEDderniereEtape"] != null)
+                {
+                    int i = 0;
+                    bool trouv = false;
+                    while (trouv == false && i < Globale.Workflow.Count)
+                    {
+                        if (Globale.Workflow[i].getCodeDepot() == leTurboMedoc.getDepotLegal() && reader["MEDderniereEtape"] == Globale.Workflow[i].getEtape())
+                        {
+                            trouv = true;
+                            leTurboMedoc.setDerniereEtape(Globale.Workflow[i]);
+                        }
+                        else { i++; }
+                    }
+
+                   
+                }
+                lesMedicaments.Add(leTurboMedoc);
             }
 
             reader.Close();
@@ -196,6 +215,7 @@ namespace Mama
 
             while (reader.Read())
             {
+            
                 lesSubirs.Add(new Subir(DateTime.Parse(reader["SUB_dateDecision"].ToString()), Globale.Etapes[int.Parse(reader["SUB_numEtape"].ToString().TrimEnd())],
                     int.Parse(reader["SUB_idDecision"].ToString().TrimEnd()), reader["SUB_codeDepotLegal"].ToString().TrimEnd()));                 
             }

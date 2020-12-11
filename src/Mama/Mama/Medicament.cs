@@ -22,7 +22,7 @@ namespace Mama
                             //NULL A SA CREATION
         private List<Subir> leWorkFlow; // il s'agit de la liste de toutes les étapes de verification nécessaire
         private Subir DerniereEtape; //il s'agit de la derniere étape de test effectuer 
-                                     //NULL A SA CREATION
+
         private Famille laFamille; // la famille du medicament
 
         /// <summary>
@@ -46,6 +46,7 @@ namespace Mama
             this.laFamille = laaFamille;
             this.AMM = null;
             this.DerniereEtape = null;
+            //this.DerniereEtape = laDerniereEtape;
             this.leWorkFlow = new List<Subir>();
         }
 
