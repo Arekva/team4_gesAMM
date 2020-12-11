@@ -15,7 +15,7 @@ namespace Mama
         /// </summary>
         public static Dictionary<string, Famille> Familles { get; } = new Dictionary<string, Famille>();
         public static Dictionary<string, Medicament> Medicaments  = new Dictionary<string, Medicament>(); 
-        public static Dictionary<string, Etape> Etapes = new Dictionary<string, Etape>();
+        public static Dictionary<int, Etape> Etapes = new Dictionary<int, Etape>();
         public static Dictionary<int, Utilisateur> Utilisateurs = new Dictionary<int, Utilisateur>();
         public static Dictionary<int, Decision> Decisions = new Dictionary<int, Decision>();
 
@@ -36,7 +36,7 @@ namespace Mama
 
             foreach(Etape lEtape in BDD.toutesLesEtapes())
             {
-                Etapes.Add(lEtape.getLibelle(), lEtape);
+                Etapes.Add(lEtape.getNumero(), lEtape);
             }
             foreach(Decision laDescision in BDD.toutesLesDecision())
             {

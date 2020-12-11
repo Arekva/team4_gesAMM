@@ -29,7 +29,7 @@ namespace Mama
                 cbMedocs.Items.Add(kvp.Value.getNomCommercial());
             }
 
-            cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
+            //cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
         }
 
         private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
