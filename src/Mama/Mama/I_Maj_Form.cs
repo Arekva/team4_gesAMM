@@ -16,5 +16,19 @@ namespace Mama
         {
             InitializeComponent();
         }
+
+        private void I_Maj_Form_Load(object sender, EventArgs e)
+        {
+            foreach(int laClef in Globale.Etapes.Keys)
+            {
+                ListViewItem lvi = new ListViewItem();
+
+                lvi.Text = Globale.Etapes[laClef].getNumero().ToString();
+                lvi.SubItems.Add(Globale.Etapes[laClef].getLibelle());
+                
+
+                lvEtape.Items.Add(lvi);
+            }
+        }
     }
 }
