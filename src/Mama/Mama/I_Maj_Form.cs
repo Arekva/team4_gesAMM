@@ -44,5 +44,15 @@ namespace Mama
             tbDateNorme.Text = (Globale.Etapes[selectedIdx] as EtapeNormee).getDate().ToShortDateString();
             tbNorme.Text = (Globale.Etapes[selectedIdx] as EtapeNormee).getNorme();
         }
+
+        private void btEnregistrerNorme_Click(object sender, EventArgs e)
+        {
+            DateTime dateValue;
+            if (DateTime.TryParse(tbDateNorme.Text, out dateValue))
+                Console.WriteLine("  Converted '{0}' to {1} ({2}).", tbDateNorme.Text,
+                                  dateValue, dateValue.Kind);
+            else
+                Console.WriteLine("  Unable to parse '{0}'.", tbDateNorme.Text);
+        }
     }
 }

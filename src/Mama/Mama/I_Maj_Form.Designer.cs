@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbNorme = new System.Windows.Forms.TextBox();
             this.btEnregistrerNorme = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lvEtape
@@ -116,12 +117,22 @@
             this.btEnregistrerNorme.TabIndex = 6;
             this.btEnregistrerNorme.Text = "Enregistrer";
             this.btEnregistrerNorme.UseVisualStyleBackColor = true;
+            this.btEnregistrerNorme.Click += new System.EventHandler(this.btEnregistrerNorme_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(825, 225);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 229);
+            this.textBox1.TabIndex = 7;
             // 
             // I_Maj_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 668);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btEnregistrerNorme);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbNorme);
@@ -148,5 +159,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbNorme;
         private System.Windows.Forms.Button btEnregistrerNorme;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
