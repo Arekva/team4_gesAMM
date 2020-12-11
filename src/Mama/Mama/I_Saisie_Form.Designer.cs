@@ -37,6 +37,11 @@
             this.DateNorme = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.btValider = new System.Windows.Forms.Button();
+            this.btRefuser = new System.Windows.Forms.Button();
+            this.aaa = new System.Windows.Forms.Label();
+            this.lbTest = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // cbMedocs
@@ -102,11 +107,59 @@
             // 
             this.columnHeader1.Text = "Decision";
             // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(337, 392);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpDate.TabIndex = 3;
+            // 
+            // btValider
+            // 
+            this.btValider.Location = new System.Drawing.Point(588, 389);
+            this.btValider.Name = "btValider";
+            this.btValider.Size = new System.Drawing.Size(92, 30);
+            this.btValider.TabIndex = 4;
+            this.btValider.Text = "Valider";
+            this.btValider.UseVisualStyleBackColor = true;
+            this.btValider.Click += new System.EventHandler(this.btValider_Click);
+            // 
+            // btRefuser
+            // 
+            this.btRefuser.Location = new System.Drawing.Point(698, 389);
+            this.btRefuser.Name = "btRefuser";
+            this.btRefuser.Size = new System.Drawing.Size(91, 30);
+            this.btRefuser.TabIndex = 5;
+            this.btRefuser.Text = "Refuser";
+            this.btRefuser.UseVisualStyleBackColor = true;
+            // 
+            // aaa
+            // 
+            this.aaa.AutoSize = true;
+            this.aaa.Location = new System.Drawing.Point(504, 347);
+            this.aaa.Name = "aaa";
+            this.aaa.Size = new System.Drawing.Size(130, 13);
+            this.aaa.TabIndex = 6;
+            this.aaa.Text = "Valider la derniere étape ?";
+            // 
+            // lbTest
+            // 
+            this.lbTest.FormattingEnabled = true;
+            this.lbTest.Location = new System.Drawing.Point(1063, 63);
+            this.lbTest.Name = "lbTest";
+            this.lbTest.Size = new System.Drawing.Size(218, 264);
+            this.lbTest.TabIndex = 7;
+            // 
             // I_Saisie_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1324, 450);
+            this.Controls.Add(this.lbTest);
+            this.Controls.Add(this.aaa);
+            this.Controls.Add(this.btRefuser);
+            this.Controls.Add(this.btValider);
+            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvWorkFlow);
             this.Controls.Add(this.cbMedocs);
@@ -129,5 +182,10 @@
         private System.Windows.Forms.ColumnHeader DateNorme;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.Button btValider;
+        private System.Windows.Forms.Button btRefuser;
+        private System.Windows.Forms.Label aaa;
+        private System.Windows.Forms.ListBox lbTest;
     }
 }

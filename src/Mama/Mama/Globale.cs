@@ -48,11 +48,12 @@ namespace Mama
             {
                 Utilisateurs.Add(lUtilisateur.getId(), lUtilisateur);
             }
+            
             foreach(Subir letape in BDD.tousSubir())
             {
                 Workflow.Add(letape);
             }
-
+            
         }
     }
 }
