@@ -29,18 +29,49 @@ namespace Mama
                 cbMedocs.Items.Add(kvp.Value.getNomCommercial());
             }
 
-            //cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
+            cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
         }
 
         private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
         {
             Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];//Globale.Medicaments[cbMedocs.SelectedItem.ToString()];
-
+            /*
 
             if (medoc.getDerniereEtape() == null || Globale.Decisions[medoc.getDerniereEtape().getidDecision()].getID() == 2)
             {
                 MessageBox.Show("La dernière étape du médicament est refusée. Aucune autre étape ne peut être ajoutée.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+               */
+
+            if (medoc.getDerniereEtape() == null)
+            {
+                ListViewItem aa = new ListViewItem();
+
+                aa.Text = Globale.Etapes[1].getNumero().ToString();
+                aa.SubItems.Add("En cours");
+                aa.SubItems.Add(Globale.Etapes[1].getLibelle());
+                aa.SubItems.Add("Aucune");
+                aa.SubItems.Add("Aucune");
+                aa.SubItems.Add("En cours");
+
+                lvWorkFlow.Items.Add(aa);
+            }
+            else if  (Globale.Decisions[medoc.getDerniereEtape().getidDecision()].getID() == 2)
+            {
+                MessageBox.Show("La dernière étape du médicament est refusée. Aucune autre étape ne peut être ajoutée.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                
+
+
+
+
+
+            }
+
+
+
         }
     }
 }
