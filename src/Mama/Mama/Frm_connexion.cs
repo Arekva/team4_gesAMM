@@ -32,7 +32,7 @@ namespace Mama
         }
 
         private void btConnect_Click(object sender, EventArgs e)
-        {
+        {/*
             bool trouve = false;
             int i = 0;
             while (!trouve && i < Globale.Utilisateurs.Count())
@@ -49,9 +49,13 @@ namespace Mama
             if (!trouve)
             {
                 MessageBox.Show("Identifiant ou mot de passe incorrect !");
-            }
-            
-            
+                
+            }*/
+            Main_Form laForm = new Main_Form();
+            this.Hide();//On cache pour réafficher la form en cas de deconnection
+            laForm.ShowDialog();
+
+
         }
     }
 }
