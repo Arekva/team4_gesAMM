@@ -16,5 +16,33 @@ namespace Mama
         {
             InitializeComponent();
         }
+
+        private void I_Maj_Form_Load(object sender, EventArgs e)
+        {
+            foreach(int laClef in Globale.Etapes.Keys)
+            {
+                if (Globale.Etapes[laClef] is EtapeNormee norme)
+                {
+                    ListViewItem lvi = new ListViewItem();
+
+                    lvi.Text = norme.getNumero().ToString();
+                    lvi.SubItems.Add(norme.getLibelle());
+                    lvi.SubItems.Add(norme.getDate().ToShortDateString());
+                    lvi.SubItems.Add(norme.getNorme());
+
+
+                    lvEtape.Items.Add(lvi);
+                }
+                
+            }
+        }
+
+        int selectedIdx = -1 ;
+        private void lvEtape_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            selectedIdx = int.Parse(lvEtape.FocusedItem.Text);
+            tbDateNorme.Text = (Globale.Etapes[selectedIdx] as EtapeNormee).getDate().ToShortDateString();
+            tbNorme.Text = (Globale.Etapes[selectedIdx] as EtapeNormee).getNorme();
+        }
     }
 }

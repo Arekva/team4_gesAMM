@@ -173,11 +173,14 @@ namespace Mama
                 string libelle = reader["ETP_libelle"].ToString().TrimEnd();
 
                 if (DateTime.TryParse(reader["ETP_dateNorme"].ToString(), out DateTime date))
-                 // normée
-                    lesEtapes.Add(new Etape(num, libelle));
-                else {// pas normée
+                { // normée  
                     string norme = reader["ETP_norme"].ToString().TrimEnd();
                     lesEtapes.Add(new EtapeNormee(num, libelle, norme, date));
+                }
+                 
+                else 
+                {// pas normée
+                    lesEtapes.Add(new Etape(num, libelle));
                 }
                 
             }
