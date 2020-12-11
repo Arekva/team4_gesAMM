@@ -30,6 +30,14 @@ namespace Mama
             }
 
             cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
+
+            
+            foreach (Subir leSubir in Globale.Workflow)
+            {
+                lbTest.Items.Add(leSubir.getCodeDepot());
+            }
+            
+
         }
 
         private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,7 +65,7 @@ namespace Mama
             else
             {
                 
-
+                
 
 
 
@@ -65,6 +73,18 @@ namespace Mama
             }
 
 
+
+        }
+
+        private void btValider_Click(object sender, EventArgs e)
+        {
+            Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];
+            if (medoc.getDerniereEtape() == null)
+            {
+                Subir NewSubission = new Subir(dtpDate.Value, Globale.Etapes[1], 1, medoc.getDepotLegal());
+                Globale.Workflow.Add(NewSubission);
+                Globale.Medicaments[medoc.getNomCommercial()].setDerniereEtape(NewSubission);
+            }
 
         }
     }
