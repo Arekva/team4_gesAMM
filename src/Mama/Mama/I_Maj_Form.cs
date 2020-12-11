@@ -27,7 +27,7 @@ namespace Mama
 
                     lvi.Text = norme.getNumero().ToString();
                     lvi.SubItems.Add(norme.getLibelle());
-                    lvi.SubItems.Add(norme.getDate().ToString());
+                    lvi.SubItems.Add(norme.getDate().ToShortDateString());
                     lvi.SubItems.Add(norme.getNorme());
 
 
@@ -41,7 +41,7 @@ namespace Mama
         private void lvEtape_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             selectedIdx = int.Parse(lvEtape.FocusedItem.Text);
-            tbDateNorme.Text = (Globale.Etapes[selectedIdx] as EtapeNormee).getDate().ToString();
+            tbDateNorme.Text = (Globale.Etapes[selectedIdx] as EtapeNormee).getDate().ToShortDateString();
             tbNorme.Text = (Globale.Etapes[selectedIdx] as EtapeNormee).getNorme();
         }
     }
