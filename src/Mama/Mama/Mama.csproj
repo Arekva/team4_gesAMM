@@ -116,6 +116,9 @@
     <EmbeddedResource Include="I_Ajout_Form.resx">
       <DependentUpon>I_Ajout_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="I_Maj_Form.resx">
+      <DependentUpon>I_Maj_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="I_Saisie_Form.resx">
       <DependentUpon>I_Saisie_Form.cs</DependentUpon>
     </EmbeddedResource>

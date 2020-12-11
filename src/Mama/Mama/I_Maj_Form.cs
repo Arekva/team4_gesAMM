@@ -21,13 +21,19 @@ namespace Mama
         {
             foreach(int laClef in Globale.Etapes.Keys)
             {
-                ListViewItem lvi = new ListViewItem();
+                if (Globale.Etapes[laClef] is EtapeNormee norme)
+                {
+                    ListViewItem lvi = new ListViewItem();
 
-                lvi.Text = Globale.Etapes[laClef].getNumero().ToString();
-                lvi.SubItems.Add(Globale.Etapes[laClef].getLibelle());
+                    lvi.Text = norme.getNumero().ToString();
+                    lvi.SubItems.Add(norme.getLibelle());
+                    lvi.SubItems.Add(norme.getDate().ToString());
+                    lvi.SubItems.Add(norme.getNorme());
+
+
+                    lvEtape.Items.Add(lvi);
+                }
                 
-
-                lvEtape.Items.Add(lvi);
             }
         }
     }
