@@ -36,5 +36,12 @@ namespace Mama
                 
             }
         }
+
+        int selectedIdx = -1 ;
+        private void lvEtape_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            selectedIdx = int.Parse(lvEtape.FocusedItem.Text);
+            tbDateNorme.Text = 
+        }
     }
 }

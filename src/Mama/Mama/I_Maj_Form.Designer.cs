@@ -54,6 +54,7 @@
             this.lvEtape.TabIndex = 1;
             this.lvEtape.UseCompatibleStateImageBehavior = false;
             this.lvEtape.View = System.Windows.Forms.View.Details;
+            this.lvEtape.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lvEtape_ItemSelectionChanged);
             // 
             // NumEtape
             // 
