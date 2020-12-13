@@ -41,7 +41,6 @@
             this.btValider = new System.Windows.Forms.Button();
             this.btRefuser = new System.Windows.Forms.Button();
             this.aaa = new System.Windows.Forms.Label();
-            this.lbTest = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // cbMedocs
@@ -64,7 +63,7 @@
             this.lvWorkFlow.HideSelection = false;
             this.lvWorkFlow.Location = new System.Drawing.Point(198, 12);
             this.lvWorkFlow.Name = "lvWorkFlow";
-            this.lvWorkFlow.Size = new System.Drawing.Size(834, 315);
+            this.lvWorkFlow.Size = new System.Drawing.Size(862, 315);
             this.lvWorkFlow.TabIndex = 1;
             this.lvWorkFlow.UseCompatibleStateImageBehavior = false;
             this.lvWorkFlow.View = System.Windows.Forms.View.Details;
@@ -143,20 +142,11 @@
             this.aaa.TabIndex = 6;
             this.aaa.Text = "Valider la derniere étape ?";
             // 
-            // lbTest
-            // 
-            this.lbTest.FormattingEnabled = true;
-            this.lbTest.Location = new System.Drawing.Point(1063, 63);
-            this.lbTest.Name = "lbTest";
-            this.lbTest.Size = new System.Drawing.Size(218, 264);
-            this.lbTest.TabIndex = 7;
-            // 
             // I_Saisie_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1324, 450);
-            this.Controls.Add(this.lbTest);
+            this.ClientSize = new System.Drawing.Size(1124, 450);
             this.Controls.Add(this.aaa);
             this.Controls.Add(this.btRefuser);
             this.Controls.Add(this.btValider);
@@ -166,6 +156,7 @@
             this.Controls.Add(this.cbMedocs);
             this.Name = "I_Saisie_Form";
             this.Text = "I_Saisie_Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.I_Saisie_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,6 +178,5 @@
         private System.Windows.Forms.Button btValider;
         private System.Windows.Forms.Button btRefuser;
         private System.Windows.Forms.Label aaa;
-        private System.Windows.Forms.ListBox lbTest;
     }
 }
