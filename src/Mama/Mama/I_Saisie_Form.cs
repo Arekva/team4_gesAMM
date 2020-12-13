@@ -44,7 +44,8 @@ namespace Mama
                 aa.Text = letape.getEtape().getNumero().ToString();
                 aa.SubItems.Add(letape.getDateDecision().ToString());
                 aa.SubItems.Add(letape.getEtape().getLibelle());
-                if (letape.getEtape().GetType().ToString() == "EtapeNormee")
+                MessageBox.Show(letape.getEtape().GetType().ToString());
+                if (letape.getEtape().GetType().ToString() == "Mama.EtapeNormee")
                 {
                     aa.SubItems.Add((letape.getEtape() as EtapeNormee).getNorme());
                     aa.SubItems.Add((letape.getEtape() as EtapeNormee).getDate().ToString());
