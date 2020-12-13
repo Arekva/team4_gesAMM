@@ -12,13 +12,16 @@ namespace Mama
 {
     public partial class Main_Form : Form
     {
-        public Main_Form()
+        int userId;
+        public Main_Form(int UserKey)
         {
             InitializeComponent();
             int WScreen = Screen.PrimaryScreen.Bounds.Width;
             int HScreen = Screen.PrimaryScreen.Bounds.Height;
             this.Size = new Size(WScreen,HScreen);
+            userId = UserKey;
         }
+        
 
 
 
@@ -62,6 +65,12 @@ namespace Mama
             C_MedicamentsEnCours_Form laForm = new C_MedicamentsEnCours_Form();
             laForm.MdiParent = this;
             laForm.Show();
+        }
+
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
+            //test pour afficher l'id de l'utilisateur avec lequel on se connect
+            MessageBox.Show(this.userId.ToString());
         }
     }
 }

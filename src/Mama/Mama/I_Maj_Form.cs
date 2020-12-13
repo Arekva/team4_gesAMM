@@ -53,6 +53,7 @@ namespace Mama
                                   dateValue, dateValue.Kind);
             else
                 Console.WriteLine("  Unable to parse '{0}'.", tbDateNorme.Text);
+
         }
     }
 }
