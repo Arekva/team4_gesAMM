@@ -46,6 +46,8 @@ namespace Mama
                         lvi.SubItems.Add(en.getNorme());
                         lvi.SubItems.Add(en.getDate().ToShortDateString());
                     }
+
+                    lvWF.Items.Add(lvi);
                 }
             }
         }
