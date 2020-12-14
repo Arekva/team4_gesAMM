@@ -107,6 +107,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Subir.cs" />
     <Compile Include="Utilisateur.cs" />
+    <EmbeddedResource Include="C_MedicamentsEnCours_Form.resx">
+      <DependentUpon>C_MedicamentsEnCours_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_NombreMedicaments_Form.resx">
       <DependentUpon>C_NombreMedicaments_Form.cs</DependentUpon>
     </EmbeddedResource>

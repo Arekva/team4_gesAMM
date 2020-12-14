@@ -167,7 +167,7 @@ namespace Mama
                 }
                  
                 else 
-                {// pas normée
+                { // pas normée
                     lesEtapes.Add(new Etape(num, libelle));
                 }
                 
