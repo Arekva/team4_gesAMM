@@ -35,7 +35,7 @@ namespace Mama
         {
             get
             {
-                return $@"Data Source={NomPC}\SQLEXPRESS;Initial Catalog={NomBase};Integrated Security=True;MultipleActiveResultSets=True";
+                return $@"Data Source=localhost\SQLEXPRESS" + (NomPC == "DESKTOP-INCTHEL" ? "01" : "") + $@";Initial Catalog={NomBase};Integrated Security=True;MultipleActiveResultSets=True";
             }
         }
 

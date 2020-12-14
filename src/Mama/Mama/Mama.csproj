@@ -113,6 +113,9 @@
     <EmbeddedResource Include="C_NombreMedicaments_Form.resx">
       <DependentUpon>C_NombreMedicaments_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_Workflow_Form.resx">
+      <DependentUpon>C_Workflow_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_connexion.resx">
       <DependentUpon>Frm_connexion.cs</DependentUpon>
     </EmbeddedResource>
