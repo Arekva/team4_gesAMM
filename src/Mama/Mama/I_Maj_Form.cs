@@ -12,9 +12,11 @@ namespace Mama
 {
     public partial class I_Maj_Form : Form
     {
-        public I_Maj_Form()
+        int idUser;
+        public I_Maj_Form(int user)
         {
             InitializeComponent();
+            idUser = user;
         }
 
         private void I_Maj_Form_Load(object sender, EventArgs e)
@@ -82,7 +84,8 @@ namespace Mama
                         BDD.LireProcedure("prc_maj_etapes_normee", 
                         new Parametre("@numEtape", selectedIdx, 32),
                         new Parametre("@norme", tbNorme.Text, 50),
-                        new Parametre("@dateNorme", testDateConvert, 50));
+                        new Parametre("@dateNorme", testDateConvert, 50),
+                        new Parametre("@idUser", idUser, 50));
                     }
                     else
                     {

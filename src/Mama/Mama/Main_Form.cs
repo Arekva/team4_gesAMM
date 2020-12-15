@@ -24,7 +24,6 @@ namespace Mama
         
 
 
-
         private void ajoutDunNouveauMédicamentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btValider laForm = new btValider();
@@ -34,7 +33,7 @@ namespace Mama
 
         private void miseÀJourDesÉtapesNorméesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            I_Maj_Form laForm = new I_Maj_Form();
+            I_Maj_Form laForm = new I_Maj_Form(userId);
             laForm.MdiParent = this;
             laForm.Show();
         }
