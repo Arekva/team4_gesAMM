@@ -19,7 +19,15 @@ namespace Mama
 
         private void I_Maj_Form_Load(object sender, EventArgs e)
         {
-            foreach(int laClef in Globale.Etapes.Keys)
+            loadingView();
+        }
+
+        public void loadingView()
+        {
+            lvEtape.Items.Clear();
+            tbNorme.Clear();
+            tbDateNorme.Clear();
+            foreach (int laClef in Globale.Etapes.Keys)
             {
                 if (Globale.Etapes[laClef] is EtapeNormee norme)
                 {
@@ -33,7 +41,7 @@ namespace Mama
 
                     lvEtape.Items.Add(lvi);
                 }
-                
+
             }
         }
 
@@ -47,12 +55,39 @@ namespace Mama
 
         private void btEnregistrerNorme_Click(object sender, EventArgs e)
         {
+            /*
+            // test permettant que voir si on arrive à convertir une date
             DateTime dateValue;
             if (DateTime.TryParse(tbDateNorme.Text, out dateValue))
                 Console.WriteLine("  Converted '{0}' to {1} ({2}).", tbDateNorme.Text,
                                   dateValue, dateValue.Kind);
             else
                 Console.WriteLine("  Unable to parse '{0}'.", tbDateNorme.Text);
+            */
+            if(selectedIdx == -1)
+            {
+                MessageBox.Show("Veuillez selectioner une étape normée");
+            }
+            else
+            {
+                DateTime testDateConvert;
+                if (DateTime.TryParse(tbDateNorme.Text, out testDateConvert))
+                {
+                    string laDateNorme = testDateConvert.ToString("d");
+                    if(tbNorme.TextLength == 12)
+                    {
+                        (Globale.Etapes[selectedIdx] as EtapeNormee).setNorme(tbNorme.Text);
+                        (Globale.Etapes[selectedIdx] as EtapeNormee).setDate(testDateConvert);
+                        loadingView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Entrez une norme valide");
+                    }
+                }
+                else
+                    MessageBox.Show("  Unable to parse "+ tbDateNorme.Text + "\n Entrez une date valide" );
+            }
 
         }
     }

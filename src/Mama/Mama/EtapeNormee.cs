@@ -26,5 +26,15 @@ namespace Mama
         {
             return this._Date;
         }
+
+        public void setNorme(string norme)
+        {
+            this._Norme = norme;
+        }
+
+        public void setDate(DateTime date)
+        {
+            this._Date = date;
+        }
     }
 }
