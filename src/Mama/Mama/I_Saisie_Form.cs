@@ -30,6 +30,7 @@ namespace Mama
             }
 
             cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
+            //quand l'index de la comboBox, execute "cbMedocs_SelectedIndexChanged";
             btValider.Enabled = false;
             btRefuser.Enabled = false;
             nudAMM.Enabled = false;
@@ -79,7 +80,7 @@ namespace Mama
 
         private void updateListView()
         {
-            Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];//Globale.Medicaments[cbMedocs.SelectedItem.ToString()];
+            Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];
             lvWorkFlow.Items.Clear();
             if (medoc.getLeWorkflow().Count == 7)
             {
@@ -92,7 +93,7 @@ namespace Mama
                 nudAMM.Enabled = false;
             }
 
-                if (medoc.getDerniereEtape() == null)
+            if (medoc.getDerniereEtape() == null)
             {
                 mettreEtapeEnCours(medoc);
                 btValider.Enabled = true;
