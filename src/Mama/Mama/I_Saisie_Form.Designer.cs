@@ -41,14 +41,19 @@
             this.btValider = new System.Windows.Forms.Button();
             this.btRefuser = new System.Windows.Forms.Button();
             this.aaa = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nudAMM = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAMM)).BeginInit();
             this.SuspendLayout();
             // 
             // cbMedocs
             // 
             this.cbMedocs.FormattingEnabled = true;
-            this.cbMedocs.Location = new System.Drawing.Point(24, 56);
+            this.cbMedocs.Location = new System.Drawing.Point(32, 69);
+            this.cbMedocs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbMedocs.Name = "cbMedocs";
-            this.cbMedocs.Size = new System.Drawing.Size(121, 21);
+            this.cbMedocs.Size = new System.Drawing.Size(160, 24);
             this.cbMedocs.TabIndex = 0;
             // 
             // lvWorkFlow
@@ -61,9 +66,10 @@
             this.DateNorme,
             this.columnHeader1});
             this.lvWorkFlow.HideSelection = false;
-            this.lvWorkFlow.Location = new System.Drawing.Point(198, 12);
+            this.lvWorkFlow.Location = new System.Drawing.Point(264, 15);
+            this.lvWorkFlow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvWorkFlow.Name = "lvWorkFlow";
-            this.lvWorkFlow.Size = new System.Drawing.Size(862, 315);
+            this.lvWorkFlow.Size = new System.Drawing.Size(1148, 387);
             this.lvWorkFlow.TabIndex = 1;
             this.lvWorkFlow.UseCompatibleStateImageBehavior = false;
             this.lvWorkFlow.View = System.Windows.Forms.View.Details;
@@ -100,24 +106,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Location = new System.Drawing.Point(16, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 13);
+            this.label1.Size = new System.Drawing.Size(202, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Veuillez choisir un médicament";
             // 
             // dtpDate
             // 
-            this.dtpDate.Location = new System.Drawing.Point(337, 392);
+            this.dtpDate.Location = new System.Drawing.Point(449, 482);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpDate.Size = new System.Drawing.Size(265, 22);
             this.dtpDate.TabIndex = 3;
             // 
             // btValider
             // 
-            this.btValider.Location = new System.Drawing.Point(588, 389);
+            this.btValider.Location = new System.Drawing.Point(784, 479);
+            this.btValider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btValider.Name = "btValider";
-            this.btValider.Size = new System.Drawing.Size(92, 30);
+            this.btValider.Size = new System.Drawing.Size(123, 37);
             this.btValider.TabIndex = 4;
             this.btValider.Text = "Valider";
             this.btValider.UseVisualStyleBackColor = true;
@@ -125,9 +134,10 @@
             // 
             // btRefuser
             // 
-            this.btRefuser.Location = new System.Drawing.Point(698, 389);
+            this.btRefuser.Location = new System.Drawing.Point(931, 479);
+            this.btRefuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btRefuser.Name = "btRefuser";
-            this.btRefuser.Size = new System.Drawing.Size(91, 30);
+            this.btRefuser.Size = new System.Drawing.Size(121, 37);
             this.btRefuser.TabIndex = 5;
             this.btRefuser.Text = "Refuser";
             this.btRefuser.UseVisualStyleBackColor = true;
@@ -136,17 +146,61 @@
             // aaa
             // 
             this.aaa.AutoSize = true;
-            this.aaa.Location = new System.Drawing.Point(504, 347);
+            this.aaa.Location = new System.Drawing.Point(672, 427);
+            this.aaa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aaa.Name = "aaa";
-            this.aaa.Size = new System.Drawing.Size(130, 13);
+            this.aaa.Size = new System.Drawing.Size(176, 17);
             this.aaa.TabIndex = 6;
             this.aaa.Text = "Valider la derniere étape ?";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(252, 482);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Date de la finition d\'étape :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(632, 539);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Numero AMM :";
+            // 
+            // nudAMM
+            // 
+            this.nudAMM.Location = new System.Drawing.Point(784, 539);
+            this.nudAMM.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.nudAMM.Minimum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nudAMM.Name = "nudAMM";
+            this.nudAMM.Size = new System.Drawing.Size(138, 22);
+            this.nudAMM.TabIndex = 9;
+            this.nudAMM.Value = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            // 
             // I_Saisie_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1124, 450);
+            this.ClientSize = new System.Drawing.Size(1499, 584);
+            this.Controls.Add(this.nudAMM);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.aaa);
             this.Controls.Add(this.btRefuser);
             this.Controls.Add(this.btValider);
@@ -154,10 +208,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvWorkFlow);
             this.Controls.Add(this.cbMedocs);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "I_Saisie_Form";
             this.Text = "I_Saisie_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.I_Saisie_Form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudAMM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +234,8 @@
         private System.Windows.Forms.Button btValider;
         private System.Windows.Forms.Button btRefuser;
         private System.Windows.Forms.Label aaa;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown nudAMM;
     }
 }

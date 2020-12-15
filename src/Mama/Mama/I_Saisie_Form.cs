@@ -32,6 +32,7 @@ namespace Mama
             cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
             btValider.Enabled = false;
             btRefuser.Enabled = false;
+            nudAMM.Enabled = false;
 
         }
 
@@ -82,9 +83,16 @@ namespace Mama
         {
             Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];//Globale.Medicaments[cbMedocs.SelectedItem.ToString()];
             lvWorkFlow.Items.Clear();
+            if (medoc.getLeWorkflow().Count == 7)
+            {
+                nudAMM.Enabled = true;
+            }
+            else
+            {
+                nudAMM.Enabled = false;
+            }
 
-
-            if (medoc.getDerniereEtape() == null)
+                if (medoc.getDerniereEtape() == null)
             {
                 mettreEtapeEnCours(medoc);
                 btValider.Enabled = true;
@@ -116,7 +124,9 @@ namespace Mama
         }
         private void CbMedocs_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             updateListView();
+
         }
 
         private void btValider_Click(object sender, EventArgs e)
@@ -143,9 +153,9 @@ namespace Mama
             updateListView();
             if (idDecision == 1 && medocs[cbMedocs.SelectedItem.ToString()].getLeWorkflow().Count == 8)
             {
-                Random r = new Random();
-                BDD.LireProcedure("prc_setAMM", new Parametre("@amm",r.Next(0,9999999), 50),
+               BDD.LireProcedure("prc_setAMM", new Parametre("@amm",(int)nudAMM.Value, 50),
                new Parametre("@depot", NewSubission.getCodeDepot(), 50));
+                MessageBox.Show("Le medicament " + medoc.getNomCommercial() + " a été valider avec le numéro AMM : " + (int)nudAMM.Value, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
