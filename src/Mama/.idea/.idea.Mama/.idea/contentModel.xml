@@ -10,13 +10,16 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="C_MedicamentsEnCours_Form.cs" t="Include" />
         <e p="C_MedicamentsEnCours_Form.Designer.cs" t="Include" />
+        <e p="C_MedicamentsEnCours_Form.resx" t="Include" />
         <e p="C_NombreMedicaments_Form.cs" t="Include" />
         <e p="C_NombreMedicaments_Form.Designer.cs" t="Include" />
         <e p="C_NombreMedicaments_Form.resx" t="Include" />
         <e p="C_Workflow_Form.cs" t="Include" />
         <e p="C_Workflow_Form.Designer.cs" t="Include" />
+        <e p="C_Workflow_Form.resx" t="Include" />
         <e p="Decision.cs" t="Include" />
         <e p="Etape.cs" t="Include" />
+        <e p="EtapeNormee.cs" t="Include" />
         <e p="Famille.cs" t="Include" />
         <e p="Frm_connexion.cs" t="Include" />
         <e p="Frm_connexion.Designer.cs" t="Include" />
@@ -28,6 +31,7 @@
         <e p="I_Ajout_Form.resx" t="Include" />
         <e p="I_Maj_Form.cs" t="Include" />
         <e p="I_Maj_Form.Designer.cs" t="Include" />
+        <e p="I_Maj_Form.resx" t="Include" />
         <e p="I_Saisie_Form.cs" t="Include" />
         <e p="I_Saisie_Form.Designer.cs" t="Include" />
         <e p="I_Saisie_Form.resx" t="Include" />

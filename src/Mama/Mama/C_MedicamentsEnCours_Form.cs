@@ -45,6 +45,8 @@ namespace Mama
                 ListViewItem lvi = new ListViewItem(sub.getidDecision().ToString());
                 lvi.SubItems.Add(sub.getEtape().getLibelle());
                 lvi.SubItems.Add(Globale.Decisions[sub.getidDecision()].getLibelle());
+
+                lvWorkflow.Items.Add(lvi);
             }
 
             lvWorkflow.Enabled = true;
