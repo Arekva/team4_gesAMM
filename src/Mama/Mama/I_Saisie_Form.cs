@@ -43,23 +43,21 @@ namespace Mama
                 ListViewItem aa = new ListViewItem();
 
                 aa.Text = letape.getEtape().getNumero().ToString();
-                aa.SubItems.Add(letape.getDateDecision().ToString());
+                aa.SubItems.Add(letape.getDateDecision().ToShortDateString());
                 aa.SubItems.Add(letape.getEtape().getLibelle());
                 if (letape.getEtape().GetType().ToString() == "Mama.EtapeNormee")
                 {
                     aa.SubItems.Add((letape.getEtape() as EtapeNormee).getNorme());
-                    aa.SubItems.Add((letape.getEtape() as EtapeNormee).getDate().ToString());
+                    aa.SubItems.Add((letape.getEtape() as EtapeNormee).getDate().ToShortDateString());
                 }
                 else
                 {
                     aa.SubItems.Add("Aucune");
                     aa.SubItems.Add("Aucune");
                 }
-                if (letape.getidDecision() == 1)
-                {
-                    aa.SubItems.Add("Validé");
-                }
-                else { aa.SubItems.Add("Refusé"); }
+
+                aa.SubItems.Add(Globale.Decisions[letape.getidDecision()].getLibelle());
+
 
 
                 lvWorkFlow.Items.Add(aa);
@@ -85,6 +83,8 @@ namespace Mama
             lvWorkFlow.Items.Clear();
             if (medoc.getLeWorkflow().Count == 7)
             {
+                MessageBox.Show("Il s'agit de la derniere étape, veuillez saisir un numéro AMM pour valider l'autorisation sur la mise en marché",
+                    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 nudAMM.Enabled = true;
             }
             else
