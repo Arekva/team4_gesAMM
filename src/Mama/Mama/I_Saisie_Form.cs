@@ -44,7 +44,6 @@ namespace Mama
                 aa.Text = letape.getEtape().getNumero().ToString();
                 aa.SubItems.Add(letape.getDateDecision().ToString());
                 aa.SubItems.Add(letape.getEtape().getLibelle());
-                MessageBox.Show(letape.getEtape().GetType().ToString());
                 if (letape.getEtape().GetType().ToString() == "Mama.EtapeNormee")
                 {
                     aa.SubItems.Add((letape.getEtape() as EtapeNormee).getNorme());
@@ -148,9 +147,6 @@ namespace Mama
                 BDD.LireProcedure("prc_setAMM", new Parametre("@amm",r.Next(0,9999999), 50),
                new Parametre("@depot", NewSubission.getCodeDepot(), 50));
             }
-            BDD.LireProcedure("prc_setLastEtape", new Parametre("@depot", NewSubission.getCodeDepot(), 50),
-               new Parametre("@etape", NewSubission.getEtape().getNumero(), 10));
-
         }
 
         private void btRefuser_Click(object sender, EventArgs e)
