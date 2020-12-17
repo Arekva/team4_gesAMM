@@ -80,12 +80,14 @@ namespace Mama
                     {
                         (Globale.Etapes[selectedIdx] as EtapeNormee).setNorme(tbNorme.Text);
                         (Globale.Etapes[selectedIdx] as EtapeNormee).setDate(testDateConvert);
-                        loadingView();
+                        (Globale.Etapes[selectedIdx] as EtapeNormee).setUser(idUser);
+                        string manorme = tbNorme.Text;
                         BDD.LireProcedure("prc_maj_etapes_normee", 
                         new Parametre("@numEtape", selectedIdx, 32),
-                        new Parametre("@norme", tbNorme.Text, 50),
+                        new Parametre("@norme", manorme, 30, SqlDbType.Char),
                         new Parametre("@dateNorme", testDateConvert, 50),
                         new Parametre("@idUser", idUser, 50));
+                        loadingView();
                     }
                     else
                     {

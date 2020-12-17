@@ -26,26 +26,34 @@ namespace Mama
         /// La taille du paramètre SQL.
         /// </summary>
         public int Taille { get; }
-        
+
         /// <summary>
         /// Créer un paramètre de procédure stoquée avec un objet C#.
         /// </summary>
         /// <param name="nomParametre">Le nom dans la procédure (ex: @idFamille)</param>
         /// <param name="valeur">La valeur du paramètre.</param>
         /// <param name="taille">La taille du paramètre (ex: varchar de 50)</param>
-        public Parametre(string nomParametre, object valeur, int taille)
+        public Parametre(string nomParametre, object valeur, int taille, SqlT? type = null)
         {
             this.NomSQL = nomParametre;
             this.Valeur = valeur;
             this.Taille = taille;
-            
-            if (valeur is string) TypeSQL = SqlT.Char;
-            else if (valeur is int) TypeSQL = SqlT.Int;
-            else if (valeur is decimal) TypeSQL = SqlT.Money;
-            else if (valeur is DateTime) TypeSQL = SqlT.DateTime;
-            else // si y'a aucun type correspondant, char par defaut
+
+            if (type == null)
             {
-                TypeSQL = SqlT.Char;
+                if (valeur is string) TypeSQL = SqlT.Char;
+                else if (valeur is int) TypeSQL = SqlT.Int;
+                else if (valeur is decimal) TypeSQL = SqlT.Money;
+                else if (valeur is DateTime) TypeSQL = SqlT.DateTime;
+                else // si y'a aucun type correspondant, char par defaut
+                {
+                    TypeSQL = SqlT.Char;
+                    this.Valeur = valeur.ToString();
+                }
+            }
+            else
+            {
+                TypeSQL = type.Value;
                 this.Valeur = valeur.ToString();
             }
         }
