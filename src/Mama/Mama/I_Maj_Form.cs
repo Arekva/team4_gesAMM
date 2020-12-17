@@ -80,6 +80,7 @@ namespace Mama
                     {
                         (Globale.Etapes[selectedIdx] as EtapeNormee).setNorme(tbNorme.Text);
                         (Globale.Etapes[selectedIdx] as EtapeNormee).setDate(testDateConvert);
+                        (Globale.Etapes[selectedIdx] as EtapeNormee).setUser(idUser);
                         loadingView();
                         BDD.LireProcedure("prc_maj_etapes_normee", 
                         new Parametre("@numEtape", selectedIdx, 32),

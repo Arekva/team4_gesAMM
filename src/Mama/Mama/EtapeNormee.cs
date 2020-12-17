@@ -8,14 +8,16 @@ namespace Mama
 {
     public class EtapeNormee : Etape
     {
-        public EtapeNormee(int num, string libelle, string norme, DateTime date) : base(num,libelle)
+        public EtapeNormee(int num, string libelle, string norme, DateTime date, int? user) : base(num,libelle)
         {
             this._Norme = norme;
             this._Date = date;
+            this._IdUser = user;
         }
 
         private string _Norme = null;
         private DateTime _Date;
+        private int? _IdUser;
 
         public string getNorme()
         {
@@ -35,6 +37,11 @@ namespace Mama
         public void setDate(DateTime date)
         {
             this._Date = date;
+        }
+
+        public void setUser(int? user)
+        {
+            this._IdUser = user;
         }
     }
 }
