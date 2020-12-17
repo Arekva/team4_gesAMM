@@ -182,6 +182,7 @@
             this.Controls.Add(this.cbFamille);
             this.Name = "btValider";
             this.Text = "I_Ajout_Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.I_Ajout_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

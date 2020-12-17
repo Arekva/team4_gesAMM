@@ -129,6 +129,7 @@
             this.Controls.Add(this.lvFamille);
             this.Name = "C_NombreMedicaments_Form";
             this.Text = "C_NombreMedicaments_Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.C_NombreMedicaments_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

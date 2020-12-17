@@ -40,9 +40,10 @@
             // cbMedocs
             // 
             this.cbMedocs.FormattingEnabled = true;
-            this.cbMedocs.Location = new System.Drawing.Point(12, 12);
+            this.cbMedocs.Location = new System.Drawing.Point(16, 15);
+            this.cbMedocs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbMedocs.Name = "cbMedocs";
-            this.cbMedocs.Size = new System.Drawing.Size(121, 21);
+            this.cbMedocs.Size = new System.Drawing.Size(160, 24);
             this.cbMedocs.TabIndex = 0;
             this.cbMedocs.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -55,9 +56,10 @@
             this.columnHeader4,
             this.columnHeader5});
             this.lvWF.HideSelection = false;
-            this.lvWF.Location = new System.Drawing.Point(226, 12);
+            this.lvWF.Location = new System.Drawing.Point(301, 15);
+            this.lvWF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvWF.Name = "lvWF";
-            this.lvWF.Size = new System.Drawing.Size(542, 261);
+            this.lvWF.Size = new System.Drawing.Size(721, 320);
             this.lvWF.TabIndex = 1;
             this.lvWF.UseCompatibleStateImageBehavior = false;
             this.lvWF.View = System.Windows.Forms.View.Details;
@@ -89,13 +91,15 @@
             // 
             // C_Workflow_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.lvWF);
             this.Controls.Add(this.cbMedocs);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "C_Workflow_Form";
             this.Text = "C_Workflow_Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.C_Workflow_Form_Load);
             this.ResumeLayout(false);
 
