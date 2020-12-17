@@ -43,9 +43,10 @@
             this.nom,
             this.famille});
             this.lvMedocs.HideSelection = false;
-            this.lvMedocs.Location = new System.Drawing.Point(22, 36);
+            this.lvMedocs.Location = new System.Drawing.Point(29, 44);
+            this.lvMedocs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvMedocs.Name = "lvMedocs";
-            this.lvMedocs.Size = new System.Drawing.Size(234, 238);
+            this.lvMedocs.Size = new System.Drawing.Size(311, 292);
             this.lvMedocs.TabIndex = 0;
             this.lvMedocs.UseCompatibleStateImageBehavior = false;
             this.lvMedocs.View = System.Windows.Forms.View.Details;
@@ -69,17 +70,18 @@
             this.columnHeader3});
             this.lvWorkflow.Enabled = false;
             this.lvWorkflow.HideSelection = false;
-            this.lvWorkflow.Location = new System.Drawing.Point(364, 36);
+            this.lvWorkflow.Location = new System.Drawing.Point(485, 44);
+            this.lvWorkflow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvWorkflow.Name = "lvWorkflow";
-            this.lvWorkflow.Size = new System.Drawing.Size(424, 238);
+            this.lvWorkflow.Size = new System.Drawing.Size(564, 292);
             this.lvWorkflow.TabIndex = 1;
             this.lvWorkflow.UseCompatibleStateImageBehavior = false;
             this.lvWorkflow.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 26;
+            this.columnHeader1.Text = "N° Etape";
+            this.columnHeader1.Width = 68;
             // 
             // columnHeader2
             // 
@@ -93,11 +95,14 @@
             // 
             // C_MedicamentsEnCours_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ControlBox = false;
             this.Controls.Add(this.lvWorkflow);
             this.Controls.Add(this.lvMedocs);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "C_MedicamentsEnCours_Form";
             this.Text = "C_MedicamentsEnCours_Form";
             this.Load += new System.EventHandler(this.C_MedicamentsEnCours_Form_Load);
