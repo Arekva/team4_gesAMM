@@ -42,6 +42,8 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(62)))), ((int)(((byte)(106)))));
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.concultationToolStripMenuItem,
@@ -49,7 +51,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1902, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1902, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,28 +61,30 @@
             this.workflowDesÉtapesDunMédicamentToolStripMenuItem,
             this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem,
             this.médicamentsEnCoursDeValidationToolStripMenuItem});
+            this.concultationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.concultationToolStripMenuItem.Name = "concultationToolStripMenuItem";
-            this.concultationToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.concultationToolStripMenuItem.Size = new System.Drawing.Size(135, 29);
             this.concultationToolStripMenuItem.Text = "Consultation";
             // 
             // workflowDesÉtapesDunMédicamentToolStripMenuItem
             // 
+            this.workflowDesÉtapesDunMédicamentToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.workflowDesÉtapesDunMédicamentToolStripMenuItem.Name = "workflowDesÉtapesDunMédicamentToolStripMenuItem";
-            this.workflowDesÉtapesDunMédicamentToolStripMenuItem.Size = new System.Drawing.Size(392, 26);
+            this.workflowDesÉtapesDunMédicamentToolStripMenuItem.Size = new System.Drawing.Size(494, 30);
             this.workflowDesÉtapesDunMédicamentToolStripMenuItem.Text = "Workflow des étapes d\'un médicament";
             this.workflowDesÉtapesDunMédicamentToolStripMenuItem.Click += new System.EventHandler(this.workflowDesÉtapesDunMédicamentToolStripMenuItem_Click);
             // 
             // nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem
             // 
             this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem.Name = "nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem";
-            this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem.Size = new System.Drawing.Size(392, 26);
+            this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem.Size = new System.Drawing.Size(494, 30);
             this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem.Text = "Nombre de médicaments autorisés par famille";
             this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem.Click += new System.EventHandler(this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem_Click);
             // 
             // médicamentsEnCoursDeValidationToolStripMenuItem
             // 
             this.médicamentsEnCoursDeValidationToolStripMenuItem.Name = "médicamentsEnCoursDeValidationToolStripMenuItem";
-            this.médicamentsEnCoursDeValidationToolStripMenuItem.Size = new System.Drawing.Size(392, 26);
+            this.médicamentsEnCoursDeValidationToolStripMenuItem.Size = new System.Drawing.Size(494, 30);
             this.médicamentsEnCoursDeValidationToolStripMenuItem.Text = "Médicaments en cours de validation ";
             this.médicamentsEnCoursDeValidationToolStripMenuItem.Click += new System.EventHandler(this.médicamentsEnCoursDeValidationToolStripMenuItem_Click);
             // 
@@ -90,28 +94,29 @@
             this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem,
             this.miseÀJourDesÉtapesNorméesToolStripMenuItem,
             this.ajoutDunNouveauMédicamentToolStripMenuItem});
+            this.interactionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.interactionToolStripMenuItem.Name = "interactionToolStripMenuItem";
-            this.interactionToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
+            this.interactionToolStripMenuItem.Size = new System.Drawing.Size(120, 29);
             this.interactionToolStripMenuItem.Text = "Interaction";
             // 
             // saisieDeLaDécisionDuneÉtapeToolStripMenuItem
             // 
             this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem.Name = "saisieDeLaDécisionDuneÉtapeToolStripMenuItem";
-            this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
+            this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem.Size = new System.Drawing.Size(379, 30);
             this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem.Text = "Saisie de la décision d\'une étape ";
             this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem.Click += new System.EventHandler(this.saisieDeLaDécisionDuneÉtapeToolStripMenuItem_Click);
             // 
             // miseÀJourDesÉtapesNorméesToolStripMenuItem
             // 
             this.miseÀJourDesÉtapesNorméesToolStripMenuItem.Name = "miseÀJourDesÉtapesNorméesToolStripMenuItem";
-            this.miseÀJourDesÉtapesNorméesToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
+            this.miseÀJourDesÉtapesNorméesToolStripMenuItem.Size = new System.Drawing.Size(379, 30);
             this.miseÀJourDesÉtapesNorméesToolStripMenuItem.Text = "Mise à jour des étapes normées";
             this.miseÀJourDesÉtapesNorméesToolStripMenuItem.Click += new System.EventHandler(this.miseÀJourDesÉtapesNorméesToolStripMenuItem_Click);
             // 
             // ajoutDunNouveauMédicamentToolStripMenuItem
             // 
             this.ajoutDunNouveauMédicamentToolStripMenuItem.Name = "ajoutDunNouveauMédicamentToolStripMenuItem";
-            this.ajoutDunNouveauMédicamentToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
+            this.ajoutDunNouveauMédicamentToolStripMenuItem.Size = new System.Drawing.Size(379, 30);
             this.ajoutDunNouveauMédicamentToolStripMenuItem.Text = "Ajout d’un nouveau médicament";
             this.ajoutDunNouveauMédicamentToolStripMenuItem.Click += new System.EventHandler(this.ajoutDunNouveauMédicamentToolStripMenuItem_Click);
             // 
@@ -119,6 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;

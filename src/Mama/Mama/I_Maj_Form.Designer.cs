@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 668);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.btEnregistrerNorme);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbNorme);
@@ -130,6 +130,7 @@
             this.Controls.Add(this.tbDateNorme);
             this.Controls.Add(this.lvEtape);
             this.Name = "I_Maj_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "I_Maj_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.I_Maj_Form_Load);
