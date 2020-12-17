@@ -49,9 +49,9 @@
             this.lvFamille.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvFamille.ForeColor = System.Drawing.Color.Navy;
             this.lvFamille.FullRowSelect = true;
-            this.lvFamille.Location = new System.Drawing.Point(328, 174);
+            this.lvFamille.Location = new System.Drawing.Point(169, 174);
             this.lvFamille.Name = "lvFamille";
-            this.lvFamille.Size = new System.Drawing.Size(756, 616);
+            this.lvFamille.Size = new System.Drawing.Size(1026, 616);
             this.lvFamille.TabIndex = 0;
             this.lvFamille.UseCompatibleStateImageBehavior = false;
             this.lvFamille.View = System.Windows.Forms.View.Details;
@@ -65,7 +65,7 @@
             // 
             this.FamilleDesignation.Text = "Designation";
             this.FamilleDesignation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.FamilleDesignation.Width = 100;
+            this.FamilleDesignation.Width = 400;
             // 
             // FamilleNbrMedicamentAutorise
             // 
@@ -76,7 +76,7 @@
             // tbFamilleSelection
             // 
             this.tbFamilleSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.tbFamilleSelection.Location = new System.Drawing.Point(1214, 237);
+            this.tbFamilleSelection.Location = new System.Drawing.Point(1315, 237);
             this.tbFamilleSelection.Name = "tbFamilleSelection";
             this.tbFamilleSelection.ReadOnly = true;
             this.tbFamilleSelection.Size = new System.Drawing.Size(166, 34);
@@ -89,7 +89,7 @@
             this.lbFamilleSelectionnée.AutoSize = true;
             this.lbFamilleSelectionnée.Font = new System.Drawing.Font("Microsoft JhengHei UI", 16.2F, System.Drawing.FontStyle.Bold);
             this.lbFamilleSelectionnée.ForeColor = System.Drawing.Color.Navy;
-            this.lbFamilleSelectionnée.Location = new System.Drawing.Point(1111, 176);
+            this.lbFamilleSelectionnée.Location = new System.Drawing.Point(1212, 176);
             this.lbFamilleSelectionnée.Name = "lbFamilleSelectionnée";
             this.lbFamilleSelectionnée.Size = new System.Drawing.Size(377, 36);
             this.lbFamilleSelectionnée.TabIndex = 2;
@@ -103,7 +103,7 @@
             this.lvLesMedicaments.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.lvLesMedicaments.ForeColor = System.Drawing.Color.Navy;
             this.lvLesMedicaments.FullRowSelect = true;
-            this.lvLesMedicaments.Location = new System.Drawing.Point(1117, 374);
+            this.lvLesMedicaments.Location = new System.Drawing.Point(1218, 374);
             this.lvLesMedicaments.Name = "lvLesMedicaments";
             this.lvLesMedicaments.Size = new System.Drawing.Size(336, 357);
             this.lvLesMedicaments.TabIndex = 3;
@@ -122,7 +122,7 @@
             this.btChercherMedicament.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btChercherMedicament.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
             this.btChercherMedicament.ForeColor = System.Drawing.Color.White;
-            this.btChercherMedicament.Location = new System.Drawing.Point(1182, 300);
+            this.btChercherMedicament.Location = new System.Drawing.Point(1283, 300);
             this.btChercherMedicament.Name = "btChercherMedicament";
             this.btChercherMedicament.Size = new System.Drawing.Size(222, 52);
             this.btChercherMedicament.TabIndex = 4;
@@ -145,6 +145,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "C_NombreMedicaments_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "C_NombreMedicaments_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.C_NombreMedicaments_Form_Load);
