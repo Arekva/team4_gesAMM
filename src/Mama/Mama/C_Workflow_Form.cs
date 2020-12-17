@@ -46,6 +46,14 @@ namespace Mama
                         lvi.SubItems.Add(en.getNorme());
                         lvi.SubItems.Add(en.getDate().ToShortDateString());
                     }
+                    else
+                    {
+                        lvi.SubItems.Add("");
+                        lvi.SubItems.Add("");
+                    }
+
+                    string etat = Globale.Decisions[sub.getidDecision()].getLibelle();
+                    lvi.SubItems.Add(etat);
 
                     lvWF.Items.Add(lvi);
                 }

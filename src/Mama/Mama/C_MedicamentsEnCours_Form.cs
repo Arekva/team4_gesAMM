@@ -22,7 +22,8 @@ namespace Mama
 
         private void C_MedicamentsEnCours_Form_Load(object sender, EventArgs e)
         {
-            _medicaments = Globale.Medicaments.Values.Where(m => m.getAMM() == null);
+            _medicaments = Globale.Medicaments.Values.
+                Where(m => m.getLeWorkflow().Count() == 0 || (m.getAMM() == null && m.getLeWorkflow().Last().getidDecision() != 2));
             foreach (Medicament medoc in _medicaments)
             {
                 ListViewItem lvi = new ListViewItem(medoc.getNomCommercial());
@@ -34,7 +35,6 @@ namespace Mama
         private void lvMedocs_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lvMedocs.SelectedIndices.Count == 0) return;
-            //Medicament medoc = Globale.Medicaments[lvMedocs.SelectedItems[0].Text];
 
             Medicament medoc = _medicaments.ElementAt(lvMedocs.SelectedIndices[0]);
 
@@ -42,9 +42,12 @@ namespace Mama
 
             foreach(Subir sub in medoc.getLeWorkflow())
             {
-                ListViewItem lvi = new ListViewItem(sub.getidDecision().ToString());
+                ListViewItem lvi = new ListViewItem(sub.getEtape().getNumero().ToString());
                 lvi.SubItems.Add(sub.getEtape().getLibelle());
-                lvi.SubItems.Add(Globale.Decisions[sub.getidDecision()].getLibelle());
+
+                Decision dec = Globale.Decisions[sub.getidDecision()];
+
+                lvi.SubItems.Add(dec.getLibelle());
 
                 lvWorkflow.Items.Add(lvi);
             }

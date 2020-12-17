@@ -35,6 +35,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // cbMedocs
@@ -53,7 +54,8 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5});
+            this.columnHeader5,
+            this.columnHeader6});
             this.lvWF.HideSelection = false;
             this.lvWF.Location = new System.Drawing.Point(226, 12);
             this.lvWF.Name = "lvWF";
@@ -71,7 +73,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Libellé";
-            this.columnHeader2.Width = 247;
+            this.columnHeader2.Width = 114;
             // 
             // columnHeader3
             // 
@@ -85,7 +87,11 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Date Norme";
-            this.columnHeader5.Width = 113;
+            this.columnHeader5.Width = 74;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Décision";
             // 
             // C_Workflow_Form
             // 
@@ -110,5 +116,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

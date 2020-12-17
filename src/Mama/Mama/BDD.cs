@@ -139,7 +139,11 @@ namespace Mama
                 {
                     leTurboMedoc.setDerniereEtape(int.Parse(reader["MEDderniereEtape"].ToString()));
                 }
-                
+                if (reader["MED_amm"].ToString() != "")
+                {
+                    leTurboMedoc.setAMM(((string)reader["MED_amm"]).TrimEnd());
+                }
+
                 lesMedicaments.Add(leTurboMedoc);
             }
 

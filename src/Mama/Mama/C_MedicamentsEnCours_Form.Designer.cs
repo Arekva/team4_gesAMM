@@ -84,7 +84,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Libellé";
-            this.columnHeader2.Width = 389;
+            this.columnHeader2.Width = 141;
             // 
             // columnHeader3
             // 
