@@ -22,8 +22,8 @@ namespace Mama
 
         private void I_Saisie_Form_Load(object sender, EventArgs e)
         {
-
-            foreach(string laCle in Globale.Medicaments.Keys)
+            this.MinimumSize = Parent.Size;
+            foreach (string laCle in Globale.Medicaments.Keys)
             {
                 medocs.Add(Globale.Medicaments[laCle].getNomCommercial(), Globale.Medicaments[laCle]);
                 //Remplissage de la liste de médicament temporaire MAIS avec le nom commercial en tant que clé

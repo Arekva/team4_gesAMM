@@ -49,7 +49,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(941, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1902, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,8 +60,8 @@
             this.nombreDeMédicamentsAutorisésParFamilleToolStripMenuItem,
             this.médicamentsEnCoursDeValidationToolStripMenuItem});
             this.concultationToolStripMenuItem.Name = "concultationToolStripMenuItem";
-            this.concultationToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
-            this.concultationToolStripMenuItem.Text = "Concultation";
+            this.concultationToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.concultationToolStripMenuItem.Text = "Consultation";
             // 
             // workflowDesÉtapesDunMédicamentToolStripMenuItem
             // 
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 494);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -127,6 +127,7 @@
             this.Name = "Main_Form";
             this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Form_FormClosed);
             this.Load += new System.EventHandler(this.Main_Form_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

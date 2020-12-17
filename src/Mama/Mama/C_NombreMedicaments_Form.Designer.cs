@@ -46,7 +46,7 @@
             this.FamilleDesignation,
             this.FamilleNbrMedicamentAutorise});
             this.lvFamille.FullRowSelect = true;
-            this.lvFamille.Location = new System.Drawing.Point(47, 47);
+            this.lvFamille.Location = new System.Drawing.Point(249, 54);
             this.lvFamille.Name = "lvFamille";
             this.lvFamille.Size = new System.Drawing.Size(416, 494);
             this.lvFamille.TabIndex = 0;
@@ -72,7 +72,7 @@
             // 
             // tbFamilleSelection
             // 
-            this.tbFamilleSelection.Location = new System.Drawing.Point(506, 95);
+            this.tbFamilleSelection.Location = new System.Drawing.Point(708, 102);
             this.tbFamilleSelection.Name = "tbFamilleSelection";
             this.tbFamilleSelection.ReadOnly = true;
             this.tbFamilleSelection.Size = new System.Drawing.Size(174, 22);
@@ -82,7 +82,7 @@
             // lbFamilleSelectionnée
             // 
             this.lbFamilleSelectionnée.AutoSize = true;
-            this.lbFamilleSelectionnée.Location = new System.Drawing.Point(503, 47);
+            this.lbFamilleSelectionnée.Location = new System.Drawing.Point(705, 54);
             this.lbFamilleSelectionnée.Name = "lbFamilleSelectionnée";
             this.lbFamilleSelectionnée.Size = new System.Drawing.Size(177, 17);
             this.lbFamilleSelectionnée.TabIndex = 2;
@@ -93,7 +93,7 @@
             this.lvLesMedicaments.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.MedicamentName});
             this.lvLesMedicaments.FullRowSelect = true;
-            this.lvLesMedicaments.Location = new System.Drawing.Point(506, 184);
+            this.lvLesMedicaments.Location = new System.Drawing.Point(708, 191);
             this.lvLesMedicaments.Name = "lvLesMedicaments";
             this.lvLesMedicaments.Size = new System.Drawing.Size(174, 357);
             this.lvLesMedicaments.TabIndex = 3;
@@ -108,7 +108,7 @@
             // 
             // btChercherMedicament
             // 
-            this.btChercherMedicament.Location = new System.Drawing.Point(506, 148);
+            this.btChercherMedicament.Location = new System.Drawing.Point(708, 155);
             this.btChercherMedicament.Name = "btChercherMedicament";
             this.btChercherMedicament.Size = new System.Drawing.Size(174, 30);
             this.btChercherMedicament.TabIndex = 4;
@@ -121,12 +121,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1156, 599);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.btChercherMedicament);
             this.Controls.Add(this.lvLesMedicaments);
             this.Controls.Add(this.lbFamilleSelectionnée);
             this.Controls.Add(this.tbFamilleSelection);
             this.Controls.Add(this.lvFamille);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "C_NombreMedicaments_Form";
             this.Text = "C_NombreMedicaments_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
