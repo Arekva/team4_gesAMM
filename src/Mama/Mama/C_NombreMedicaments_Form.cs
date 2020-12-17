@@ -23,7 +23,7 @@ namespace Mama
 
         private void C_NombreMedicaments_Form_Load(object sender, EventArgs e)
         {
-            
+            this.MinimumSize = Parent.Size;
             foreach (string laClef in Globale.Familles.Keys)
             {
                 ListViewItem lvi = new ListViewItem();

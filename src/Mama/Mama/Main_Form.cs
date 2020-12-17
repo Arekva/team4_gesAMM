@@ -71,5 +71,10 @@ namespace Mama
             //test pour afficher l'id de l'utilisateur avec lequel on se connect
             //MessageBox.Show(this.userId.ToString());
         }
+
+        private void Main_Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Frm_connexion.Instance.showConnection();
+        }
     }
 }

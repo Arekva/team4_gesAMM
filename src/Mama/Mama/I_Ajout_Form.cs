@@ -19,6 +19,7 @@ namespace Mama
 
         private void I_Ajout_Form_Load(object sender, EventArgs e)
         {
+            this.MinimumSize = Parent.Size;
             foreach (string laClef in Globale.Familles.Keys)
             {
                 cbFamille.Items.Add(Globale.Familles[laClef].getLibelle());

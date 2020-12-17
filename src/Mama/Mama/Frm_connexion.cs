@@ -12,9 +12,16 @@ namespace Mama
 {
     public partial class Frm_connexion : Form
     {
+        public static Frm_connexion Instance { get; private set; }
         public Frm_connexion()
         {
+            Instance = this;
             InitializeComponent();
+        }
+
+        public void showConnection()
+        {
+            this.Show();
         }
 
         private void Frm_connexion_Load(object sender, EventArgs e)

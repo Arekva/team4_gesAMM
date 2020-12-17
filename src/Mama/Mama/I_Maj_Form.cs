@@ -22,6 +22,7 @@ namespace Mama
         private void I_Maj_Form_Load(object sender, EventArgs e)
         {
             loadingView();
+            this.MinimumSize = Parent.Size;
         }
 
         public void loadingView()

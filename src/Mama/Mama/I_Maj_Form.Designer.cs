@@ -131,6 +131,7 @@
             this.Controls.Add(this.lvEtape);
             this.Name = "I_Maj_Form";
             this.Text = "I_Maj_Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.I_Maj_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
