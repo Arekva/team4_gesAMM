@@ -69,7 +69,7 @@ namespace Mama
         private void Main_Form_Load(object sender, EventArgs e)
         {
             //test pour afficher l'id de l'utilisateur avec lequel on se connect
-            MessageBox.Show(this.userId.ToString());
+            //MessageBox.Show(this.userId.ToString());
         }
     }
 }
