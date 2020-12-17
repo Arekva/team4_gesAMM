@@ -85,6 +85,7 @@ namespace Mama
         private void updateListView()
             //C'est la fonction qui utilise celles vue précedement pour constituer la listeview
         {
+            lvWorkFlow.Items.Clear();
             Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()]; // c'est la qu'on voit l'interet du dictionnaire avec le nom commerciale
             if (medoc.getLeWorkflow().Count == 7)
             {
