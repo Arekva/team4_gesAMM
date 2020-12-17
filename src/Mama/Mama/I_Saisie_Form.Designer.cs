@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.nudAMM = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudAMM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             this.cbMedocs.FormattingEnabled = true;
             this.cbMedocs.Location = new System.Drawing.Point(32, 69);
-            this.cbMedocs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMedocs.Margin = new System.Windows.Forms.Padding(4);
             this.cbMedocs.Name = "cbMedocs";
             this.cbMedocs.Size = new System.Drawing.Size(160, 24);
             this.cbMedocs.TabIndex = 0;
@@ -67,7 +68,7 @@
             this.columnHeader1});
             this.lvWorkFlow.HideSelection = false;
             this.lvWorkFlow.Location = new System.Drawing.Point(264, 15);
-            this.lvWorkFlow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvWorkFlow.Margin = new System.Windows.Forms.Padding(4);
             this.lvWorkFlow.Name = "lvWorkFlow";
             this.lvWorkFlow.Size = new System.Drawing.Size(1148, 387);
             this.lvWorkFlow.TabIndex = 1;
@@ -116,7 +117,7 @@
             // dtpDate
             // 
             this.dtpDate.Location = new System.Drawing.Point(449, 482);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(265, 22);
             this.dtpDate.TabIndex = 3;
@@ -124,7 +125,7 @@
             // btValider
             // 
             this.btValider.Location = new System.Drawing.Point(784, 479);
-            this.btValider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btValider.Margin = new System.Windows.Forms.Padding(4);
             this.btValider.Name = "btValider";
             this.btValider.Size = new System.Drawing.Size(123, 37);
             this.btValider.TabIndex = 4;
@@ -135,7 +136,7 @@
             // btRefuser
             // 
             this.btRefuser.Location = new System.Drawing.Point(931, 479);
-            this.btRefuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btRefuser.Margin = new System.Windows.Forms.Padding(4);
             this.btRefuser.Name = "btRefuser";
             this.btRefuser.Size = new System.Drawing.Size(121, 37);
             this.btRefuser.TabIndex = 5;
@@ -193,11 +194,21 @@
             0,
             0});
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(106, 329);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "label4";
+            // 
             // I_Saisie_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1499, 584);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.nudAMM);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -208,7 +219,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvWorkFlow);
             this.Controls.Add(this.cbMedocs);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "I_Saisie_Form";
             this.Text = "I_Saisie_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -237,5 +248,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudAMM;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -16,21 +16,23 @@ namespace Mama
         {
             InitializeComponent();
         }
-
+        // Initialisation d'une liste de médicaments
         Dictionary<string, Medicament> medocs = new Dictionary<string, Medicament>();
         
 
         private void I_Saisie_Form_Load(object sender, EventArgs e)
         {
 
-            foreach(var kvp in Globale.Medicaments)
+            foreach(string laCle in Globale.Medicaments.Keys)
             {
-                medocs.Add(kvp.Value.getNomCommercial(), kvp.Value);
-                cbMedocs.Items.Add(kvp.Value.getNomCommercial());
+                medocs.Add(Globale.Medicaments[laCle].getNomCommercial(), Globale.Medicaments[laCle]);
+                //Remplissage de la liste de médicament temporaire MAIS avec le nom commercial en tant que clé
+                cbMedocs.Items.Add(Globale.Medicaments[laCle].getNomCommercial());
             }
 
             cbMedocs.SelectedIndexChanged += CbMedocs_SelectedIndexChanged;
             //quand l'index de la comboBox, execute "cbMedocs_SelectedIndexChanged";
+
             btValider.Enabled = false;
             btRefuser.Enabled = false;
             nudAMM.Enabled = false;
@@ -38,6 +40,7 @@ namespace Mama
         }
 
         private void RemplirEtapeFinis(Medicament medoc)
+            //C'est la fonction qui rajoute les étapes qui sont validée ou refusée dans la listeView
         {
             foreach (Subir letape in medoc.getLeWorkflow())
             {
@@ -65,6 +68,7 @@ namespace Mama
             }
         }
         private void mettreEtapeEnCours(Medicament medoc)
+            //C'est la fonction qui met l'etape en cours, celle ou l'on choisit si elle est validee ou refusee
         {
             ListViewItem aa = new ListViewItem();
 
@@ -79,9 +83,9 @@ namespace Mama
         }
 
         private void updateListView()
+            //C'est la fonction qui utilise celles vue précedement pour constituer la listeview
         {
-            Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];
-            lvWorkFlow.Items.Clear();
+            Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()]; // c'est la qu'on voit l'interet du dictionnaire avec le nom commerciale
             if (medoc.getLeWorkflow().Count == 7)
             {
                 MessageBox.Show("Il s'agit de la derniere étape, veuillez saisir un numéro AMM pour valider l'autorisation sur la mise en marché",
@@ -137,6 +141,7 @@ namespace Mama
         }
 
         private void AccepterOuRefuser(int idDecision)
+            //Action en cas d'appuis sur le bouton valider ou refuser
         {
             Medicament medoc = medocs[cbMedocs.SelectedItem.ToString()];
 
@@ -144,18 +149,22 @@ namespace Mama
             Subir NewSubission = new Subir(dtpDate.Value, Globale.Etapes[medoc.getLeWorkflow().Count + 1], idDecision, medoc.getDepotLegal());
             Globale.Workflow.Add(NewSubission);
             medocs[cbMedocs.SelectedItem.ToString()].addToWorkflow(NewSubission);
+            //ajout de la ligne du workflow dans l'application
 
             BDD.LireProcedure("prc_newWorkflow", new Parametre("@dateDeci", dtpDate.Value, 50),
                 new Parametre("@numEtape", NewSubission.getEtape().getNumero(), 50),
                 new Parametre("@idDeci", NewSubission.getidDecision(), 50),
                 new Parametre("@depotLegal", NewSubission.getCodeDepot(), 250));
+            //ajout de la ligne du workflow dans la bdd
 
             Globale.Medicaments[medoc.getDepotLegal()].setDerniereEtape(NewSubission.getEtape().getNumero());
             updateListView();
+            //ajout de la derniere étape du médicament dans l'application
             if (idDecision == 1 && medocs[cbMedocs.SelectedItem.ToString()].getLeWorkflow().Count == 8)
             {
                BDD.LireProcedure("prc_setAMM", new Parametre("@amm",(int)nudAMM.Value, 50),
                new Parametre("@depot", NewSubission.getCodeDepot(), 50));
+                //ajout de la derniere étape dans la bdd
                 MessageBox.Show("Le medicament " + medoc.getNomCommercial() + " a été valider avec le numéro AMM : " + (int)nudAMM.Value, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
