@@ -159,12 +159,19 @@ namespace Mama
             {
                 int num = Int32.Parse(reader["ETP_num"].ToString().TrimEnd());
                 string libelle = reader["ETP_libelle"].ToString().TrimEnd();
-                int? user = int.Parse(reader["ETP_dernier_user"].ToString().TrimEnd());
+
+                int? user = null;
+
+                if(reader["ETP_dernier_user"].GetType() != typeof(DBNull))
+                {
+                    user = (int)reader["ETP_dernier_user"];
+                }
+                //int? user = (int?)(reader["ETP_dernier_user"]);
 
                 if (DateTime.TryParse(reader["ETP_dateNorme"].ToString(), out DateTime date))
                 { // normée  
                     string norme = reader["ETP_norme"].ToString().TrimEnd();
-                    lesEtapes.Add(new EtapeNormee(num, libelle, norme, date, user));
+                    lesEtapes.Add(new EtapeNormee(num, libelle, norme, date, null));
                 }
                  
                 else 

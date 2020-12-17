@@ -1,7 +1,7 @@
 USE [master]
 GO
 
-/****** Object:  Database [GSB_gesAMM]    Script Date: 17/12/2020 14:18:05 ******/
+/****** Object:  Database [GSB_gesAMM]    Script Date: 17/12/2020 15:09:25 ******/
 CREATE DATABASE [GSB_gesAMM]
  CONTAINMENT = NONE
  ON  PRIMARY 
