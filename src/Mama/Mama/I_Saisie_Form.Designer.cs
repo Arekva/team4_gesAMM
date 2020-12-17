@@ -51,10 +51,9 @@
             // 
             this.cbMedocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMedocs.FormattingEnabled = true;
-            this.cbMedocs.Location = new System.Drawing.Point(57, 85);
-            this.cbMedocs.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMedocs.Location = new System.Drawing.Point(43, 69);
             this.cbMedocs.Name = "cbMedocs";
-            this.cbMedocs.Size = new System.Drawing.Size(160, 33);
+            this.cbMedocs.Size = new System.Drawing.Size(121, 28);
             this.cbMedocs.TabIndex = 0;
             // 
             // lvWorkFlow
@@ -70,10 +69,9 @@
             this.columnHeader1});
             this.lvWorkFlow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvWorkFlow.HideSelection = false;
-            this.lvWorkFlow.Location = new System.Drawing.Point(369, 13);
-            this.lvWorkFlow.Margin = new System.Windows.Forms.Padding(4);
+            this.lvWorkFlow.Location = new System.Drawing.Point(277, 11);
             this.lvWorkFlow.Name = "lvWorkFlow";
-            this.lvWorkFlow.Size = new System.Drawing.Size(1148, 258);
+            this.lvWorkFlow.Size = new System.Drawing.Size(861, 210);
             this.lvWorkFlow.TabIndex = 1;
             this.lvWorkFlow.UseCompatibleStateImageBehavior = false;
             this.lvWorkFlow.View = System.Windows.Forms.View.Details;
@@ -101,39 +99,37 @@
             // DateNorme
             // 
             this.DateNorme.Text = "Date de la norme";
-            this.DateNorme.Width = 106;
+            this.DateNorme.Width = 134;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Decision";
+            this.columnHeader1.Width = 81;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 24);
+            this.label1.Size = new System.Drawing.Size(211, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "Veuillez choisir un médicament";
             // 
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(369, 323);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDate.Location = new System.Drawing.Point(277, 262);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(333, 30);
+            this.dtpDate.Size = new System.Drawing.Size(251, 26);
             this.dtpDate.TabIndex = 3;
             // 
             // btValider
             // 
             this.btValider.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btValider.Location = new System.Drawing.Point(788, 347);
-            this.btValider.Margin = new System.Windows.Forms.Padding(4);
+            this.btValider.Location = new System.Drawing.Point(591, 282);
             this.btValider.Name = "btValider";
-            this.btValider.Size = new System.Drawing.Size(123, 37);
+            this.btValider.Size = new System.Drawing.Size(92, 30);
             this.btValider.TabIndex = 4;
             this.btValider.Text = "Valider";
             this.btValider.UseVisualStyleBackColor = false;
@@ -142,10 +138,9 @@
             // btRefuser
             // 
             this.btRefuser.BackColor = System.Drawing.Color.IndianRed;
-            this.btRefuser.Location = new System.Drawing.Point(935, 347);
-            this.btRefuser.Margin = new System.Windows.Forms.Padding(4);
+            this.btRefuser.Location = new System.Drawing.Point(701, 282);
             this.btRefuser.Name = "btRefuser";
-            this.btRefuser.Size = new System.Drawing.Size(121, 37);
+            this.btRefuser.Size = new System.Drawing.Size(91, 30);
             this.btRefuser.TabIndex = 5;
             this.btRefuser.Text = "Refuser";
             this.btRefuser.UseVisualStyleBackColor = false;
@@ -155,10 +150,9 @@
             // 
             this.aaa.AutoSize = true;
             this.aaa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.aaa.Location = new System.Drawing.Point(772, 295);
-            this.aaa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.aaa.Location = new System.Drawing.Point(579, 240);
             this.aaa.Name = "aaa";
-            this.aaa.Size = new System.Drawing.Size(296, 29);
+            this.aaa.Size = new System.Drawing.Size(231, 24);
             this.aaa.TabIndex = 6;
             this.aaa.Text = "Valider la derniere étape ?";
             // 
@@ -166,9 +160,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(365, 295);
+            this.label2.Location = new System.Drawing.Point(274, 240);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 24);
+            this.label2.Size = new System.Drawing.Size(186, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "Date de la finition de l\'etape";
             // 
@@ -176,9 +171,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(365, 376);
+            this.label3.Location = new System.Drawing.Point(274, 306);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 24);
+            this.label3.Size = new System.Drawing.Size(109, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Numero AMM :";
             // 
@@ -186,7 +182,8 @@
             // 
             this.nudAMM.BackColor = System.Drawing.Color.White;
             this.nudAMM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudAMM.Location = new System.Drawing.Point(510, 372);
+            this.nudAMM.Location = new System.Drawing.Point(382, 302);
+            this.nudAMM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudAMM.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -198,7 +195,7 @@
             0,
             0});
             this.nudAMM.Name = "nudAMM";
-            this.nudAMM.Size = new System.Drawing.Size(138, 30);
+            this.nudAMM.Size = new System.Drawing.Size(104, 26);
             this.nudAMM.TabIndex = 9;
             this.nudAMM.Value = new decimal(new int[] {
             1000000,
@@ -208,10 +205,10 @@
             // 
             // I_Saisie_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1499, 584);
+            this.ClientSize = new System.Drawing.Size(1124, 474);
             this.ControlBox = false;
             this.Controls.Add(this.nudAMM);
             this.Controls.Add(this.label3);
@@ -223,7 +220,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvWorkFlow);
             this.Controls.Add(this.cbMedocs);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "I_Saisie_Form";
